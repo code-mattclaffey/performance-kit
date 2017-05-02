@@ -65,7 +65,7 @@ We can use the picture element to our advantage here using a source element like
 
 ```
 
-Now you have yourself a hidden image which is around 300 btyes (1/3 of 1kb) & you have also reduced the image requests too since you're askings for one image-hidden.
+Now you have yourself a hidden image which is around 1.4kb & you have also reduced the image requests too since you're askings for one image-hidden.
 
 ![Before network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/after-html-network.png)
 
