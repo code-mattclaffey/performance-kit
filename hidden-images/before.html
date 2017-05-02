@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Hidden Images
+		</title>
+		<style>
+			.image {
+				display: block;
+				height: 250px;
+				width: 400px;
+			}
+
+			.image--hidden-mobile {
+				display: none;
+			}
+
+			@media screen and (min-width: 30em) {
+				.image--hidden-mobile {
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">
+							<img src="/_assets/images/image-home.jpg" alt="My Image" class="image image--hidden-mobile"/>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="/about">
+							<img src="/_assets/images/image-about.jpg" alt="My Image" class="image image--hidden-mobile"/>
+							Home
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</body>
+</html>
