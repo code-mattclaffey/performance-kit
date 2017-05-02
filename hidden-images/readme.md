@@ -37,7 +37,7 @@ So our html would look something like this:
 ![Before network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/before-html-network.png)
 
 ## The Solution
-So lets say each image is around 85kb-90kb & imagine there are 10 nav items. THAT'S 850kb-900kb loading on mobile which is complete waste & its a render blocking resource.
+So lets say each image is around 85kb-95kb & imagine there are 10 nav items. THAT'S 850kb-950kb loading on mobile which is complete waste & its a render blocking resource.
 
 We can use the picture element to our advantage here using a source element like so:
 
