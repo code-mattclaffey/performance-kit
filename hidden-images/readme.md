@@ -1,7 +1,7 @@
 # Hidden Images
 
 ## Introduction
-Some website have functionality where they can hide components on a website using the CMS. Maybe the image is set to `display: none;` at a certain breakpoint in the code. Something we as developers tend to forget that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change or lack of understanding of what will happen if its done that way.
+Some websites have functionality where they can hide components on a website using the CMS. Maybe the image is set to `display: none;` at a certain breakpoint in the code. As developers, we tend to forget is that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way.
 
 Even though these images are hidden visually, they are still being requested & downloaded by the browser. I call this wasteful page weight.
 
@@ -9,7 +9,7 @@ Even though these images are hidden visually, they are still being requested & d
 
 In some senarios, we may need to hide an image for a certain breakpoint. Sometimes we might get something like this:
 
-`On mobile I would like to see no images in the navigation but have images displaying on desktop...` - I know right :persevere:
+`On Desktop I would like to see  images in the navigation but have images hidden on mobile...` - I know right :persevere:
 
 So our html would look something like this:
 
@@ -69,7 +69,7 @@ We can use the picture element to our advantage here using a source element like
 
 ```
 
-Now we have a hidden image which is around 1.4kb & we have also reduced the image requests too.
+If there were 10 nav items, we have now cut down that page weight on mobile from 950kb to just 1.4kb & 10 requests to 1 request.
 
 ![Before network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/after-html-network.png)
 
