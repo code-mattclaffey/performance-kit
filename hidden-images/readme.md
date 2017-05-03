@@ -1,7 +1,7 @@
 # Hidden Images
 
 ## Introduction
-When the image is set to `display: none;` on an image at a certain breakpoint, we tend to forget is that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way.
+When the image is set to `display: none;` at a certain breakpoint, we tend to forget is that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way.
 
 Even though these images are hidden visually, they are still being requested & downloaded by the browser. I call this wasteful page weight.
 
@@ -9,7 +9,7 @@ Even though these images are hidden visually, they are still being requested & d
 
 In some senarios, we may need to hide an image for a certain breakpoint. Sometimes we might get something like this:
 
-`On Desktop I would like to see  images in the navigation but have images hidden on mobile...` - I know right :persevere:
+`On desktop I would like to see  images in the navigation but have images hidden on mobile...` - I know right :persevere:
 
 So our html would look something like this:
 
