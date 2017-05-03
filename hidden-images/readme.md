@@ -1,7 +1,7 @@
 # Hidden Images
 
 ## Introduction
-Some websites have functionality where they can hide components on a website using the CMS. Maybe the image is set to `display: none;` at a certain breakpoint in the code. As developers, we tend to forget is that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way.
+When the image is set to `display: none;` on an image at a certain breakpoint, we tend to forget is that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way.
 
 Even though these images are hidden visually, they are still being requested & downloaded by the browser. I call this wasteful page weight.
 
