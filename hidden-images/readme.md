@@ -1,11 +1,15 @@
 # Hidden Images
-In some senarios, you may need to hide an image for a certain breakpoint so you may get something like this:
 
-## Example Senario: Navigation with images
+## Introduction
+Some website have functionality where they can hide components on a website using the CMS. Maybe the image is set to `display: none;` at a certain breakpoint in the code. Something we as developers tend to forget that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change or lack of understanding of what will happen if its done that way.
+
+Even though these images are hidden visually, they are still being requested & downloaded by the browser. I call this wasteful page weight.
+
+## Senario: Navigation Images
+
+In some senarios, we may need to hide an image for a certain breakpoint. Sometimes we might get something like this:
 
 `On mobile I would like to see no images in the navigation but have images displaying on desktop...` - I know right :persevere:
-
-This will still affect our page load even if we just set `display: none;` for the breakpoint.
 
 So our html would look something like this:
 
@@ -37,7 +41,7 @@ So our html would look something like this:
 ![Before network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/before-html-network.png)
 
 ## The Solution
-So lets say each image is around 85kb-95kb & imagine there are 10 nav items. THAT'S 850kb-950kb loading on mobile which is complete waste & its a render blocking resource.
+So lets say each image is around 85kb-95kb & imagine there are 10 nav items. THAT'S 850kb-950kb loading on mobile which is complete waste & its a render blocking resource. :worried:
 
 We can use the picture element to our advantage here using a source element like so:
 
@@ -65,7 +69,7 @@ We can use the picture element to our advantage here using a source element like
 
 ```
 
-Now you have yourself a hidden image which is around 1.4kb & you have also reduced the image requests too since you're askings for one image-hidden.
+Now we have a hidden image which is around 1.4kb & we have also reduced the image requests too.
 
 ![Before network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/after-html-network.png)
 
