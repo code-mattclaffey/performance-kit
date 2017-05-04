@@ -71,6 +71,6 @@ If there were 10 nav items, we have now cut down that page weight on mobile from
 
 ![Before network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/after-html-network.png)
 
-[Example of it in use - before.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/before.html)
+[Example of it in use - before.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/hidden-images/before.html)
 
-[Example of it in use - after.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/after.html)
+[Example of it in use - after.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/hidden-images/after.html)
