@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"start": "localhost ./"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,8 @@
     "url": "https://github.com/code-mattclaffey/performance-kit/issues"
   },
   "homepage": "https://github.com/code-mattclaffey/performance-kit#readme",
-  "dependencies": {
-    "gulp": "^3.9.1"
+  "dependencies": {},
+  "devDependencies": {
+    "localhost": "^0.2.2"
   }
 }

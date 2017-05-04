@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title> Lazy Loading - After </title>
+		<link href="./styles.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
+		<script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
+
+		<script>
+			window.lazySizesConfig = window.lazySizesConfig || {};
+		</script>
+	</head>
+	<body class="no-js">
+		<main class="container">
+			<h1>
+				My Fancy Photograpghy site!
+			</h1>
+			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
+				<!--[if IE 9]><video style="display: none;><![endif]-->
+				<source data-srcset="/_assets/images/responsive/sunset--large.jpg" media="(min-width: 769px)">
+				<source data-srcset="/_assets/images/responsive/sunset--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+				<source data-srcset="/_assets/images/responsive/sunset--small.jpg" media="(max-width: 480px)">
+				<!--[if IE 9]></video><![endif]-->
+				<img data-src="/_assets/images/responsive/sunset--large.jpg" class="img lazyload" alt="Sunset photograpghy" />
+
+				<noscript>
+					<source srcset="/_assets/images/responsive/sunset--large.jpg" media="(min-width: 769px)">
+					<source srcset="/_assets/images/responsive/sunset--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+					<source srcset="/_assets/images/responsive/sunset--small.jpg" media="(max-width: 480px)">
+					<img src="/_assets/images/responsive/sunset--large.jpg" class="img" alt="Sunset photograpghy" />
+				</noscript>
+			</picture>
+
+			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
+				<!--[if IE 9]><video style="display: none;><![endif]-->
+				<source data-srcset="/_assets/images/responsive/iceberg--large.jpg" media="(min-width: 769px)">
+				<source data-srcset="/_assets/images/responsive/iceberg--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+				<!--[if IE 9]></video><![endif]-->
+				<source data-srcset="/_assets/images/responsive/iceberg--small.jpg" media="(max-width: 480px)">
+				<img data-src="/_assets/images/responsive/iceberg--large.jpg" class="img lazyload" alt="Iceberg photograpghy" />
+
+				<noscript>
+					<source srcset="/_assets/images/responsive/iceberg--large.jpg" media="(min-width: 769px)">
+					<source srcset="/_assets/images/responsive/iceberg--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+					<source srcset="/_assets/images/responsive/iceberg--small.jpg" media="(max-width: 480px)">
+					<img src="/_assets/images/responsive/iceberg--large.jpg" class="img" alt="Iceberg photograpghy" />
+				</noscript>
+			</picture>
+
+			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
+				<!--[if IE 9]><video style="display: none;><![endif]-->
+				<source data-srcset="/_assets/images/responsive/drive-through--large.jpg" media="(min-width: 769px)">
+				<source data-srcset="/_assets/images/responsive/drive-through--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+				<!--[if IE 9]></video><![endif]-->
+				<source data-srcset="/_assets/images/responsive/drive-through--small.jpg" media="(max-width: 480px)">
+
+				<img data-src="/_assets/images/responsive/drive-through--large.jpg" class="img lazyload" alt="Drive Through photograpghy" />
+				<noscript>
+					<source srcset="/_assets/images/responsive/drive-through--large.jpg" media="(min-width: 769px)">
+					<source srcset="/_assets/images/responsive/drive-through--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+					<source srcset="/_assets/images/responsive/drive-through--small.jpg" media="(max-width: 480px)">
+					<img src="/_assets/images/responsive/drive-through--large.jpg" class="img" alt="Drive Through photograpghy" />
+				</noscript>
+			</picture>
+
+			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
+				<!--[if IE 9]><video style="display: none;><![endif]-->
+				<source data-srcset="/_assets/images/responsive/rocks--large.jpg" media="(min-width: 769px)">
+				<source data-srcset="/_assets/images/responsive/rocks--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+				<source data-srcset="/_assets/images/responsive/rocks--small.jpg" media="(max-width: 480px)">
+				<!--[if IE 9]></video><![endif]-->
+				<img data-src="/_assets/images/responsive/rocks--large.jpg" class="img lazyload" alt="Rocks photograpghy" />
+				<noscript>
+					<source srcset="/_assets/images/responsive/rocks--large.jpg" media="(min-width: 769px)">
+					<source srcset="/_assets/images/responsive/rocks--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+					<source srcset="/_assets/images/responsive/rocks--small.jpg" media="(max-width: 480px)">
+					<img src="/_assets/images/responsive/rocks--large.jpg" class="img" alt="Rocks photograpghy" />
+				</noscript>
+			</picture>
+
+			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
+				<!--[if IE 9]><video style="display: none;><![endif]-->
+				<source data-srcset="/_assets/images/responsive/pathway--large.jpg" media="(min-width: 769px)">
+				<source data-srcset="/_assets/images/responsive/pathway--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+				<!--[if IE 9]></video><![endif]-->
+				<source data-srcset="/_assets/images/responsive/pathway--small.jpg" media="(max-width: 480px)">
+				<img data-src="/_assets/images/responsive/pathway--large.jpg" class="img lazyload" alt="Pathway photograpghy" />
+				<noscript>
+					<source srcset="/_assets/images/responsive/pathway--large.jpg" media="(min-width: 769px)">
+					<source srcset="/_assets/images/responsive/pathway--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
+					<source srcset="/_assets/images/responsive/pathway--small.jpg" media="(max-width: 480px)">
+					<img src="/_assets/images/responsive/pathway--large.jpg" class="img" alt="Pathway photograpghy" />
+				</noscript>
+			</picture>
+		</main>
+		<script>
+			(function() {
+				document.body.classList.remove('no-js');
+				document.body.classList.add('js');
+			}());
+		</script>
+	</body>
+</html>

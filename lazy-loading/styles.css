@@ -1,0 +1,94 @@
+/**
+
+----------------
+Lazyloading Example
+By: Matt Claffey
+version: 1.0.0
+----------------
+
+**/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Inknut Antiqua';
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 769px;
+}
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+}
+.lazyloaded {
+	opacity: 1;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transition: all 300ms;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+}
+
+.no-js img.lazyload {
+	display: none;
+}
+
+.picture {
+	background-color: #eee;
+	display: block;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.img {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+:root {
+	--16-x-9: calc(9  / 16 * 100%);
+	--4-x-3: calc(3  / 4 * 100%);
+}
+
+.picture--xs-16-x-9 {
+	padding-top: var(--16-x-9);
+}
+
+.picture--xs-4-x-3 {
+	padding-top: var(--4-x-3);
+}
+
+@media screen and (min-width: 480px) and (max-width: 769px) {
+	.picture--sm-16-x-9 {
+		padding-top: var(--16-x-9);
+	}
+
+	.picture--sm-4-x-3 {
+		padding-top: var(--4-x-3);
+	}
+}
+
+@media screen and (min-width: 769px) {
+		.picture--md-16-x-9 {
+			padding-top: var(--16-x-9);
+		}
+
+		.picture--md-4-x-3 {
+			padding-top: var(--4-x-3);
+		}
+}
