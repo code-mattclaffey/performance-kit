@@ -1,4 +1,4 @@
-(function() {
-	document.body.classList.remove('no-js');
-	document.body.classList.add('js');
-}());
+(function($) {
+	$(document.body).removeClass('no-js');
+	$(document.body).addClass('js');
+}(jQuery));
