@@ -145,6 +145,6 @@ This will now add the padding top which will represent the size of the image. Th
 |Before              | 412ms|  8.42s|
 |After               | 494ms|  4.01s|
 
-[Example of it in use - before.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/lazy-loading/before.html)
+[Example of it in use - before.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/demos/04/before.html)
 
-[Example of it in use - after.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/lazy-loading/after.html)
+[Example of it in use - after.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/demos/04/after.html)
