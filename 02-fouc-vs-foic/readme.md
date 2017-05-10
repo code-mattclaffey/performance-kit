@@ -151,5 +151,12 @@ If you look at the [before example](http://performance-kit.surge.sh/02/before.ht
 
 **Tip:** - click the capture screenshots button to view a filmstrip of the page load.
 
+Before.html - We was the content did not appear on the page until 4.32 seconds whereas with FOUC our content appear in 1.04 seconds.
+
+Before.html
+![Before.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-fouc-vs-foic/screenshots/FOIC.png)
+
+After.html
+![After.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-fouc-vs-foic/screenshots/FOUC.png)
 
 [Chapter 03 - Hidden Images](https://github.com/code-mattclaffey/performance-kit/tree/master/03-hidden-images/readme.md)
