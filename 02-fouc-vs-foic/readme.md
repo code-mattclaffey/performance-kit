@@ -12,7 +12,7 @@ In my personal opinion, I believe that FOUC is better than FOIC because of one s
 
 ## Implementing FOUC
 
-In [our example]() we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are just including the font family striaght into the css file:
+In [our example](http://performance-kit.surge.sh/02/before.html) we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are just including the font family striaght into the css file:
 
 ```css
 body {
@@ -147,11 +147,12 @@ I found this pretty handy especially if you work on a project that uses `font-fa
 
 Measuring the value for this would be to get a film strip from [Web Page Test](https://www.webpagetest.org) and then get another film strip after the implementation. Once you have the comparison you can show the client/project manager the improvement for extra brownie points. :wink:
 
-If you look at the [before example](http://performance-kit.surge.sh/02/before.html) & compare it to the [after example](http://performance-kit.surge.sh/02/after.html) we should see a difference when I reload the page on a **Regular 3G connection (Network Panel > DevTools)**.
-
 **Tip:** - click the capture screenshots button to view a filmstrip of the page load.
 
-Before.html - We was the content did not appear on the page until 4.32 seconds whereas with FOUC our content appear in 1.04 seconds.
+
+## Results
+
+FOIC content did not appear on the page until 4.32 seconds whereas with FOUC our content appear in 1.04 seconds.
 
 Before.html
 
