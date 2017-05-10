@@ -463,14 +463,25 @@ li {
 	border-bottom: 0;
 }
 
-.no-js #open-nav:target .site-header__nav {
+.no-js #open-nav:target .site-header__nav,
+[data-nav-state="open"] .site-header__nav {
 	transform: translateX(0);
 	-webkit-transform: translateX(0);
 	-moz-transform: translateX(0);
 }
 
-.overlay,
-.no-js #open-nav:target .overlay--hidden {
+.overlay {
+	background: transparent;
+	transition: background 200ms ease-in-out;
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0;
+}
+
+.no-js #open-nav:target .overlay,
+[data-nav-state="open"] .overlay {
 	background: rgba(0, 0, 0, 0.3);
 	height: 100%;
 	left: 0;
@@ -479,14 +490,4 @@ li {
 	visibility: visible;
 	z-index: 3;
 	width: 100%;
-}
-
-.overlay--hidden {
-	background: transparent;
-	transition: background 200ms ease-in-out;
-	-webkit-transition: background 200ms ease-in-out;
-	-moz-transition: background 200ms ease-in-out;
-	visibility: hidden;
-	overflow: hidden;
-	height: 0;
 }

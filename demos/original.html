@@ -7,10 +7,10 @@
 		<link href="/_assets/css/styles.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 	</head>
-	<body class="no-js">
+	<body class="no-js" data-nav-state>
 		<div id="open-nav">
 		<header class="site-header">
-			<a href="#open-nav" data-navigation="" class="site-header__icon btn btn--yellow icon--hamburger">
+			<a href="#open-nav" data-nav-toggle="" class="site-header__icon btn btn--yellow icon--hamburger">
 				Menu
 			</a>
 			<nav class="site-header__nav">
@@ -34,7 +34,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="btn btn--yellow">Close</a>
+						<a href="#" class="btn btn--yellow" data-nav-toggle="">Close</a>
 					</li>
 				</ul>
 			</nav>
@@ -160,7 +160,7 @@
 				</footer>
 			</article>
 		</main>
-		<div class="overlay overlay--hidden"></div>
+		<div class="overlay"></div>
 		</div>
 		<script src="/_assets/scripts/main.js"></script>
 	</body>
