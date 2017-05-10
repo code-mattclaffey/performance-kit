@@ -23,22 +23,21 @@
 
 @font-face {
     font-family: 'lemon_birdregular';
-    src: url('/_assets/fonts/lemonbird-regular-webfont.woff2') format('woff2'),
-        url('/_assets/fonts/lemonbird-regular-webfont.woff') format('woff');
+    src: url('/_assets/fonts/lemonbird-regular-webfont.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'robotobold';
-    src: url('/_assets/fonts/Roboto-Bold-webfont.woff') format('woff');
+    src: url('/_assets/fonts/Roboto-Bold-webfont.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'robotolight';
-    src: url('/_assets/fonts/Roboto-Light-webfont.woff') format('woff');
+    src: url('/_assets/fonts/Roboto-Light-webfont.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -319,6 +318,7 @@ li {
 }
 
 .contact__content {
+	margin: 0 auto;
 	max-width: 30em;
 }
 
