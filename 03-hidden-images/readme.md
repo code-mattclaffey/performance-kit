@@ -30,7 +30,7 @@ In [our example](https://github.com/code-mattclaffey/performance-kit/tree/master
 - Creating wasteful page weight on mobile
 - Adding a wasted http requests to the page
 
-![Before.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/before-html-network.png)
+![Before.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/03-hidden-images/screenshots/before-html-network.png)
 
 ## The Solution
 Each image is around 56kb-100kb. THAT'S 211kb loading on mobile which is a complete waste & its a render blocking resource. :worried:
@@ -52,8 +52,8 @@ We can use the picture element to our advantage here using a source element like
 
 We have now cut down that page weight on mobile from 487kb to just 276kb & 10 requests to 8 request.
 
-![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/hidden-images/screenshots/after-html-network.png)
+![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/03-hidden-images/screenshots/after-html-network.png)
 
-[Example of it in use - before.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/hidden-images/before.html)
+[Example of it in use - before.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/03/before.html)
 
-[Example of it in use - after.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/hidden-images/after.html)
+[Example of it in use - after.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/03/after.html)
