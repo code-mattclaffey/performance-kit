@@ -20,7 +20,7 @@ body {
 }
 
 .h1, h1, .h2, h2, .btn {
-	font-family: 'robotobold', Helvetica, Arial, sans-serif;
+  font-family: 'robotobold', Helvetica, Arial, sans-serif;
 }
 
 ```
@@ -34,7 +34,7 @@ body,
 }
 
 .h1, h1, .h2, h2, .btn {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .roboto-light-loaded {
@@ -46,7 +46,7 @@ body,
 .roboto-bold-loaded .h2,
 .roboto-bold-loaded h2,
 .roboto-bold-loaded .btn {
-	font-family: 'robotobold';
+  font-family: 'robotobold';
 }
 
 ```
@@ -82,7 +82,7 @@ body,
 }
 
 .h1, h1, .h2, h2, .btn {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .wf-active body {
@@ -94,7 +94,7 @@ body,
 .wf-active .h2,
 .wf-active h2,
 .wf-active .btn {
-	font-family: 'robotobold';
+  font-family: 'robotobold';
 }
 
 ```
@@ -109,15 +109,15 @@ With TypeKit:
 $f-roboto-light: 'robotolight';
 
 @mixin font-loaded($fName) {
-	font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 
-	.wf-active & {
-		font-family: $fName, Helvetica, Arial, sans-serif;
-	}
+  .wf-active & {
+	  font-family: $fName, Helvetica, Arial, sans-serif;
+  }
 }
 
 body {
-	@include font-loaded($f-roboto-light);
+  @include font-loaded($f-roboto-light);
 }
 
 ```
