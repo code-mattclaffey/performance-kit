@@ -148,3 +148,5 @@ This will now add the padding top which will represent the size of the image. Th
 [Example of it in use - before.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/demos/04/before.html)
 
 [Example of it in use - after.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/demos/04/after.html)
+
+[Chapter 6 - Image Compression](https://github.com/code-mattclaffey/performance-kit/tree/master/06-Image-compression/readme.md)

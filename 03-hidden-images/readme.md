@@ -57,3 +57,6 @@ We have now cut down that page weight on mobile from 487kb to just 276kb & 10 re
 [Example of it in use - before.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/03/before.html)
 
 [Example of it in use - after.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/03/after.html)
+
+
+[Chapter 4 - Responsive Images](https://github.com/code-mattclaffey/performance-kit/tree/master/04-responsive-images/readme.md)
