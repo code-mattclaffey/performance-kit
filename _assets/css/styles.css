@@ -214,10 +214,16 @@ li {
 .banner__heading--logo {
 	display: block;
 	font-family: var(--f-title);
-	font-size: 6em;
+	font-size: 4em;
 	font-weight: normal;
 	line-height: 1em;
 	margin-bottom: var(--gutter);
+}
+
+@media(min-width: 30em) {
+	.banner__heading--logo {
+		font-size: 6em;
+	}
 }
 
 /*
@@ -274,6 +280,7 @@ li {
 	display: -webkit-flex;
 	display: flex;
 	flex-wrap: wrap;
+	text-align: center;
 }
 
 .latest-video__block {
@@ -286,9 +293,16 @@ li {
 .latest-video .latest-video__block:first-child {
 	padding-right: var(--gutter-large);
 }
+@media (max-width: 48em) {
+	.latest-video__block {
+		margin: 0 auto;
+		max-width: 30em;
+	}
+}
 
 @media (min-width: 48em) {
 	.latest-video__block {
+		text-align: left;
 		width: 50%;
 	}
 }
