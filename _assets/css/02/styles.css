@@ -138,6 +138,10 @@ li {
 	width: 100%;
 }
 
+.card figure {
+	margin: 0;
+}
+
 .portfolio .card {
 	box-shadow: 0px 3px 10px 2px var(--yellow-dark);
 	transition: box-shadow 0.3s ease-in-out;
@@ -166,6 +170,7 @@ li {
 
 .picture {
 	background-color: var(--grey);
+	display: block;
 	position: relative;
 	overflow: hidden;
 	margin: 0;
@@ -173,6 +178,10 @@ li {
 
 .picture--xs-16x9 {
 	padding-top: var(--sixteen-by-nine)
+}
+
+.picture--xs-4x3 {
+	padding-top: var(--four-by-three);
 }
 
 @media(min-width: 30em) {
@@ -262,6 +271,7 @@ li {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 .portfolio__item {

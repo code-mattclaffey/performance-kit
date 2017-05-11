@@ -69,67 +69,7 @@ Now we have our HTML setup, we now need to add in the css to get that fade in ef
 }
 ```
 
-## Aspect Ratios
-
 **Note:** The lazy loading may not work correctly if you do not set the correct sizes for your placeholders. Images that have no height will be loaded on the page at the wrong time because they may sit further up the fold.
-
-To maintain the aspect ratio of your image while it is loading the calculation is `(height/width) * width = height`.
-
-Example:
-
-```css
-:root {
-	--16-x-9: calc(9  / 16 * 100%);
-}
-
-.picture {
-	background-color: #eee;
-	display: block;
-	margin-bottom: 20px;
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-}
-
-.img {
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-}
-
-/*
-	16 x 9 image
-*/
-
-.picture--16-x-9 {
-	padding-top: var(--16-x-9);
-}
-
-```
-
-This will now add the padding top which will represent the size of the image. The the image will load in without jumpy effect.
-
-**Tip:** You can set different aspect ratios for different breakpoints if your image changes aspect ratio on different breakpoints.
-
-```css
-.picture--xs-16-x-9 {
-	padding-top: var(--16-x-9);
-}
-
-@media screen and (min-width: 480px) and (max-width: 769px) {
-	.picture--sm-16-x-9 {
-		padding-top: var(--16-x-9);
-	}
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-	.picture--md-16-x-9 {
-		padding-top: var(--16-x-9);
-	}
-}
-```
 
 ## Results
 > Regular 3G (100ms, 750kb/s, 250kb/s)

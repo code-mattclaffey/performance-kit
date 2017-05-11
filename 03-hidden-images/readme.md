@@ -50,6 +50,12 @@ We can use the picture element to our advantage here using a source element like
 </li>
 ```
 
+**Note:** We need to add the `picturefill` library for browsers that dont support `picture`. We can add this in the head of the document with the `async` attribute to prevent render blocking.
+
+```html
+  <script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
+```
+
 We have now cut down that page weight on mobile from 487kb to just 276kb & 10 requests to 8 request.
 
 ![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/03-hidden-images/screenshots/after-html-network.png)
