@@ -1,11 +1,11 @@
 # Render Blocking Scripts
-jQuery jQuery jQuery.... such a love hate relationship I have with jQuery. Love side, I really like the simplicity of it. Hate side, It is quite a large file & it has to load in the head of the page if you have third party scripts that rely on it.
+jQuery jQuery jQuery.... such a love hate relationship. Love side, I really like the simplicity of it. Hate side, It is quite a large file & it has to load in the head of the page, if third party scripts that rely on it.
 
-This improvement would depend on if you had any third party scripts that relied on jQuery being loaded before it has or not.
+If you haven't got any third party scripts that rely on jQuery then you can do this.
 
 ## Async jQuery
 
-So to remove jQuery from render blocking the page we need to add `async` to our script tag.
+To remove jQuery from being a render blocking resource, the script will need an `async` attribute adding to the element.
 
 ```html
 <script src="https://code.jquery.com/jquery-1.12.3.min.js" async></script>
