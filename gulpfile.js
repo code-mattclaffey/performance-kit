@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var surge = require('gulp-surge');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('copy:html', function() {
 	return gulp.src(['./demos/**/*'])
@@ -16,4 +17,13 @@ gulp.task('default', ['copy:html', 'copy:assets'], function() {
     project: './build',         // Path to your static build directory
     domain: 'performance-kit.surge.sh'  // Your domain or Surge subdomain
   });
+});
+
+
+gulp.task('imagemin', function() {
+	return gulp.src('./_assets/images/**/*.jpg')
+				.pipe(imagemin({
+					optimizationLevel: 7
+				}))
+				.pipe(gulp.dest('./build/_assets/images'));
 });

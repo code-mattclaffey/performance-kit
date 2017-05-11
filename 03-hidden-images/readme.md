@@ -19,7 +19,7 @@ In [our example](https://github.com/code-mattclaffey/performance-kit/tree/master
 
 <li>
 	<a href="#" class="site-header__nav-link">
-		<img class="site-header__nav-image" src="/_assets/designs/home.jpg" alt="Home" />
+		<img class="site-header__nav-image" src="/_assets/images/home.jpg" alt="Home" />
 		Home
 	</a>
 </li>
@@ -41,9 +41,9 @@ We can use the picture element to our advantage here using a source element like
 <li>
 	<a href="#" class="site-header__nav-link">
 		<picture class="site-header__nav-image">
-			<source srcset="/_assets/designs/home.jpg" media="(min-width: 48em)">
+			<source srcset="/_assets/images/home.jpg" media="(min-width: 48em)">
 			<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
-			<img class="image" src="/_assets/designs/home.jpg" alt="Home"/>
+			<img class="image" src="/_assets/images/home.jpg" alt="Home"/>
 		</picture>
 		Home
 	</a>

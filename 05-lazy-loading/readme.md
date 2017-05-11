@@ -24,11 +24,11 @@ HTML without lazy loading:
 
 ```html
 <picture class="picture picture--xs-4x3">
-  <source srcset="/_assets/designs/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
-  <source srcset="/_assets/designs/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-  <source srcset="/_assets/designs/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-  <source srcset="/_assets/designs/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
-  <img src="/_assets/designs/responsive/blow-dryer--large.jpg" class="image" alt="title" />
+  <source srcset="/_assets/images/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+  <source srcset="/_assets/images/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+  <source srcset="/_assets/images/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+  <source srcset="/_assets/images/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+  <img src="/_assets/images/responsive/blow-dryer--large.jpg" class="image" alt="title" />
 </picture>
 ```
 
@@ -37,18 +37,18 @@ HTML with lazy loading:
 ```html
 <picture class="picture picture--xs-4x3">
 	<!--[if IE 9]><video style="display: none;><![endif]-->
-	<source data-srcset="/_assets/designs/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
-	<source data-srcset="/_assets/designs/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-	<source data-srcset="/_assets/designs/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-	<source data-srcset="/_assets/designs/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+	<source data-srcset="/_assets/images/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+	<source data-srcset="/_assets/images/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+	<source data-srcset="/_assets/images/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+	<source data-srcset="/_assets/images/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
 	<!--[if IE 9]></video><![endif]-->
-	<img data-src="/_assets/designs/responsive/blow-dryer--large.jpg" class="image lazyload" alt="title" />
+	<img data-src="/_assets/images/responsive/blow-dryer--large.jpg" class="image lazyload" alt="title" />
 	<noscript>
-		<source srcset="/_assets/designs/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
-		<source srcset="/_assets/designs/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-		<source srcset="/_assets/designs/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-		<source srcset="/_assets/designs/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
-		<img src="/_assets/designs/responsive/blow-dryer--large.jpg" class="image" alt="title" />
+		<source srcset="/_assets/images/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+		<source srcset="/_assets/images/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+		<source srcset="/_assets/images/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+		<source srcset="/_assets/images/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+		<img src="/_assets/images/responsive/blow-dryer--large.jpg" class="image" alt="title" />
 	</noscript>
 </picture>
 ```
