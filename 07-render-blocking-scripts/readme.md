@@ -33,10 +33,12 @@ Next we need to add a script to the bottom of the page that will add our main.js
 This really makes a big impact on our website. Here is an example of what our filmstrip was like before we had render blocking scripts.
 
 Before:
+
 ![Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/07-render-blocking-scripts/screenshots/render-blocking-scripts-before.png)
 
 
 After:
+
 ![After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/07-render-blocking-scripts/screenshots/render-blocking-scripts-after.png)
 
 
