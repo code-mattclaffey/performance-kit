@@ -4,11 +4,9 @@
 In a nutshell, FOIC is when your browser is loading a font it does not have. While this is happening, the browser will paint all the text but it will appear hidden on the page until the font has loaded. Once loaded, the browser will re-paint & re-layout the text correctly. [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif)
 
 ## FOUC (“flash of unstyled content”)
-FOUC is when the browser paints & layouts your fallback font then when the font has loaded it will re-paint & re-layout the styles to the text. [See example](https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif)
+FOUC paints the fallback font and waits until the font has loaded. Once loaded the browser will re-paint. [See example](https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif)
 
-Chrome stops waiting for web fonts after 3 seconds which means the browser will automatically paint the fallback font.
-
-In my personal opinion, I believe that FOUC is better than FOIC because of one simple reason. We are getting the content to the user faster and we are progressively enhancing our website by serving our fallback font first then adding the nicer functionality once the font has loaded.
+In my personal opinion, I believe that FOUC is better than FOIC for one simple reason. We are getting the content to the user faster and we are progressively enhancing our website by serving our fallback font first.
 
 ## Implementing FOUC
 
@@ -25,7 +23,7 @@ body {
 
 ```
 
-At the minute we are following the FOIC method so we need to get rid of the `robotolight` and add a `fontname-loaded` class to the body element.
+At the minute we are following the FOIC method. Firstly we have to remove `robotolight/robotobold` from the css selectors. After we have done that we need to add a css class as a wrapper around the elements that need the font.
 
 ```css
 body,
@@ -37,7 +35,7 @@ body,
   font-weight: bold;
 }
 
-.roboto-light-loaded {
+.roboto-light-loaded body {
   font-family: 'robotolight', Helvetica, Arial, sans-serif;
 }
 
@@ -46,34 +44,29 @@ body,
 .roboto-bold-loaded .h2,
 .roboto-bold-loaded h2,
 .roboto-bold-loaded .btn {
-  font-family: 'robotobold';
+  font-family: 'robotobold', Helvetica, Arial, sans-serif;
 }
 
 ```
 
-To load the font into the page without any render blocking we have to make an async XMLHttpRequest to the server then when the asset has been loaded we will add a HTML class to the html element specifying which font has loaded.
+To load the font into the page without any render blocking we have to make an async XMLHttpRequest to the server. Once the font has been loaded we will add a class to the html element specifying which font has loaded.
 
-```html
+```js
 
-<body>
-	<script>
-		function LoadFont(url, className) {
-			$.get(url).done(function() {
-				$('html').addClass(className);
-			});
-		}
+function LoadFont(url, className) {
+	$.get(url).done(function() {
+		$('html').addClass(className);
+	});
+}
 
-		LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
-		LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
-	</script>
-</body>
-
+LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
+LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
 
 ```
 
 ## Implementing FOUC with Typekit
 
-Typekit makes FOUC really easy to implement because they have [font events](https://helpx.adobe.com/typekit/using/font-events.html) which will add the class name of `wf-active` to the html element. All we need to do is wrap the `wf-active` class around our elements that use the `font family` css property.
+Typekit makes FOUC really easy to implement. The library has [font events](https://helpx.adobe.com/typekit/using/font-events.html) that adds the class name `wf-active` to the html element. All we need to do is wrap the `wf-active` class around our elements that use requires the font.
 
 ```css
 body,
@@ -94,14 +87,14 @@ body,
 .wf-active .h2,
 .wf-active h2,
 .wf-active .btn {
-  font-family: 'robotobold';
+  font-family: 'robotobold', Helvetica, Arial, sans-serif;
 }
 
 ```
 
 ### In Sass ...
 
-Useful technique in SASS I have learnt is to add this in a `mixin`. For example:
+Useful mixin in SASS:
 
 With TypeKit:
 
@@ -145,14 +138,14 @@ I found this pretty handy especially if you work on a project that uses `font-fa
 
 ## How to measure the value
 
-Measuring the value for this would be to get a film strip from [Web Page Test](https://www.webpagetest.org) and then get another film strip after the implementation. Once you have the comparison you can show the client/project manager the improvement for extra brownie points. :wink:
+Measuring the value for this would be to compare a before/after film strip from [Web Page Test](https://www.webpagetest.org).
 
 **Tip:** - in DevTools use the capture screenshots button to view a filmstrip of the page load. This is similliar to Web Page Test but not as accurate.
 
 
 ## Results
 
-FOIC content did not appear on the page until 4.32 seconds whereas with FOUC our content appear in 1.04 seconds.
+FOIC content did not appear on the page until 3.96s seconds whereas with FOUC our content appear in 1.01 seconds.
 
 Before.html
 
