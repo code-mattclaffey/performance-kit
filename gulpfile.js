@@ -7,18 +7,25 @@ gulp.task('copy:html', function() {
 	.pipe(gulp.dest('./build'))
 });
 
-gulp.task('copy:assets', function() {
-	return gulp.src(['./_assets/**'])
-	.pipe(gulp.dest('./build/_assets'))
+gulp.task('copy:fonts', function() {
+	return gulp.src(['./_assets/fonts/**'])
+	.pipe(gulp.dest('./build/_assets/fonts'))
 });
 
-gulp.task('default', ['copy:html', 'copy:assets'], function() {
-	return surge({
-    project: './build',         // Path to your static build directory
-    domain: 'performance-kit.surge.sh'  // Your domain or Surge subdomain
-  });
+gulp.task('copy:screenshots', function() {
+	return gulp.src(['./_assets/screenshots/**'])
+	.pipe(gulp.dest('./build/_assets/screenshots'))
 });
 
+gulp.task('copy:js', function() {
+	return gulp.src(['./_assets/scripts/**'])
+	.pipe(gulp.dest('./build/_assets/scripts'))
+});
+
+gulp.task('copy:css', function() {
+	return gulp.src(['./_assets/css/**'])
+	.pipe(gulp.dest('./build/_assets/css'))
+});
 
 gulp.task('imagemin', function() {
 	return gulp.src('./_assets/images/**/*.jpg')
@@ -27,3 +34,11 @@ gulp.task('imagemin', function() {
 				}))
 				.pipe(gulp.dest('./build/_assets/images'));
 });
+
+gulp.task('default', ['copy:html', 'copy:fonts', 'copy:js', 'copy:css', 'copy:screenshots', 'imagemin'], function() {
+	return surge({
+    project: './build',         // Path to your static build directory
+    domain: 'performance-kit.surge.sh'  // Your domain or Surge subdomain
+  });
+});
+
