@@ -4,7 +4,7 @@ Before we talk about Preconnect we need to know what a DNS prefetch is. DNS pref
 Preconnect is an extension of DNS prefetch but it will make the TCP handshake and optional TLS negotiation.
 
 ## Browser Support
-![Browser Support for preconnect](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect/screenshots/preconnect-bs.png)
+![Browser Support for preconnect](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect/screenshots/preconnect.png)
 
 Like preload, it is not massively support everywhere yet but this doesnt mean we should'nt add this feature in because as time goes on more browsers will support this feature. As a fallback we can use the `dns-prefetch` feature to still speed up the connections between different urls. DNS prefetch is widely supported in nearly every browser:
 
