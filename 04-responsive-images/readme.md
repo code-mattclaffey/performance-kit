@@ -21,11 +21,9 @@ This will make my picture elements look like:
 	</picture>
 ```
 
-Next we need to add a placeholder background to represent the size of the image when the image has not loaded yet. Benefits to this is when we are looking at our website on a slow connection and we will see something that represents an image rather than a white screen. To do this add `padding-top` to the picture element & then `position: absolute;` to the image element.
-
-Before:
-
 ![No Placeholder](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/04-responsive-images/screenshots/no-placeholder.png)
+
+Next we need to add a placeholder background to represent the size of the image when the image has not loaded yet. Adding a placeholder will prevent the browser from triggering a layout change when the image has loaded. When we are looking at our website on a slow connection we will see something that represents an image rather than a white screen.
 
 After:
 
