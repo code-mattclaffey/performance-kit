@@ -12,6 +12,11 @@ gulp.task('copy:fonts', function() {
 	.pipe(gulp.dest('./build/_assets/fonts'))
 });
 
+gulp.task('copy:images', function() {
+	return gulp.src(['./_assets/images/**'])
+	.pipe(gulp.dest('./build/_assets/images'))
+});
+
 gulp.task('copy:screenshots', function() {
 	return gulp.src(['./_assets/screenshots/**'])
 	.pipe(gulp.dest('./build/_assets/screenshots'))
@@ -29,13 +34,11 @@ gulp.task('copy:css', function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('./_assets/images/**/*.jpg')
-				.pipe(imagemin({
-					optimizationLevel: 7
-				}))
-				.pipe(gulp.dest('./build/_assets/images'));
+				.pipe(imagemin())
+				.pipe(gulp.dest('./build/_assets/images-compressed'));
 });
 
-gulp.task('default', ['copy:html', 'copy:fonts', 'copy:js', 'copy:css', 'copy:screenshots', 'imagemin'], function() {
+gulp.task('default', ['copy:html', 'copy:fonts', 'copy:images', 'copy:js', 'copy:css', 'copy:screenshots', 'imagemin'], function() {
 	return surge({
     project: './build',         // Path to your static build directory
     domain: 'performance-kit.surge.sh'  // Your domain or Surge subdomain
