@@ -3,56 +3,218 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title> 04 - Lazy Loading - Before </title>
-		<link href="./styles.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+		<title> Original </title>
+		<link href="/_assets/css/02/styles.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
 	</head>
-	<body class="no-js">
+	<body class="no-js" data-nav-state>
+		<div id="open-nav">
+		<header class="site-header">
+			<a href="#open-nav" data-nav-toggle="" class="site-header__icon btn btn--yellow icon--hamburger">
+				Menu
+			</a>
+			<nav class="site-header__nav">
+				<ul class="site-header__nav-list">
+					<li>
+						<a href="#" class="site-header__nav-link">
+							<picture class="site-header__nav-image">
+								<source srcset="/_assets/designs/home.jpg" media="(min-width: 48em)">
+								<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+								<img class="image" src="/_assets/designs/home.jpg" alt="Home"/>
+							</picture>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="#" class="site-header__nav-link">
+							<picture class="site-header__nav-image">
+								<source srcset="/_assets/designs/portfolio.jpg" media="(min-width: 48em)">
+								<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+								<img class="image" src="/_assets/designs/portfolio.jpg" alt="Home"/>
+							</picture>
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#" class="site-header__nav-link">
+							<picture class="site-header__nav-image">
+								<source srcset="/_assets/designs/blog.jpg" media="(min-width: 48em)">
+								<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+								<img class="image" src="/_assets/designs/blog.jpg" alt="Home"/>
+							</picture>
+							Blog
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn btn--yellow" data-nav-toggle="">Close</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 		<main class="container">
-			<h1>
-				My Fancy Photograpghy site!
-			</h1>
-			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
-				<source srcset="/_assets/images/responsive/sunset--large.jpg" media="(min-width: 769px)">
-				<source srcset="/_assets/images/responsive/sunset--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-				<source srcset="/_assets/images/responsive/sunset--small.jpg" media="(max-width: 480px)">
-				<img src="/_assets/images/responsive/sunset--large.jpg" class="img" alt="Sunset photograpghy" />
-			</picture>
+			<article>
+				<div class="wrapper wrapper--purple">
+					<header class="banner wrapper__inner">
+						<div class="banner__content">
+							<h1 class="h1 banner__heading">
+								<span class="banner__heading--logo">
+									Hello!
+								</span>
 
-			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
-				<source srcset="/_assets/images/responsive/iceberg--large.jpg" media="(min-width: 769px)">
-				<source srcset="/_assets/images/responsive/iceberg--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-				<source srcset="/_assets/images/responsive/iceberg--small.jpg" media="(max-width: 480px)">
-				<img src="/_assets/images/responsive/iceberg--large.jpg" class="img" alt="Sunset photograpghy" />
-			</picture>
-
-			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
-				<source srcset="/_assets/images/responsive/drive-through--large.jpg" media="(min-width: 769px)">
-				<source srcset="/_assets/images/responsive/drive-through--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-				<source srcset="/_assets/images/responsive/drive-through--small.jpg" media="(max-width: 480px)">
-				<img src="/_assets/images/responsive/drive-through--large.jpg" class="img" alt="Sunset photograpghy" />
-			</picture>
-
-			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
-				<source srcset="/_assets/images/responsive/rocks--large.jpg" media="(min-width: 769px)">
-				<source srcset="/_assets/images/responsive/rocks--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-				<source srcset="/_assets/images/responsive/rocks--small.jpg" media="(max-width: 480px)">
-				<img src="/_assets/images/responsive/rocks--large.jpg" class="img" alt="Sunset photograpghy" />
-			</picture>
-
-			<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
-				<source srcset="/_assets/images/responsive/pathway--large.jpg" media="(min-width: 769px)">
-				<source srcset="/_assets/images/responsive/pathway--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-				<source srcset="/_assets/images/responsive/pathway--small.jpg" media="(max-width: 480px)">
-				<img src="/_assets/images/responsive/pathway--large.jpg" class="img" alt="Sunset photograpghy" />
-			</picture>
+								Photography & Film Portfolio
+							</h1>
+						</div>
+					</header>
+				</div>
+				<section class="wrapper">
+					<div class="latest-video wrapper__inner">
+						<div class="latest-video__block">
+							<h2 class="h2">About Hello!</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+							</p>
+						</div>
+						<div class="latest-video__block">
+							<!--
+								Youtube component here
+							-->
+							<div class="picture picture--xs-16x9 picture--md-4x3">
+								<iframe class="iframe" src="https://www.youtube.com/embed/OUB6zKc-Tos" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="portfolio wrapper wrapper--yellow">
+					<div class="wrapper__inner">
+						<h2 class="h2 ">Illustrations</h2>
+						<ul class="portfolio__list">
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<source srcset="/_assets/designs/responsive/bbq--large.jpg" media="(min-width: 1024px)">
+											<source srcset="/_assets/designs/responsive/bbq--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source srcset="/_assets/designs/responsive/bbq--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source srcset="/_assets/designs/responsive/bbq--xs.jpg" media="(max-width: 480px)">
+											<img src="/_assets/designs/responsive/bbq--large.jpg" class="image" alt="title" />
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<source srcset="/_assets/designs/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+											<source srcset="/_assets/designs/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source srcset="/_assets/designs/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source srcset="/_assets/designs/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+											<img src="/_assets/designs/responsive/blow-dryer--large.jpg" class="image" alt="title" />
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<source srcset="/_assets/designs/responsive/telescope--large.jpg" media="(min-width: 1024px)">
+											<source srcset="/_assets/designs/responsive/telescope--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source srcset="/_assets/designs/responsive/telescope--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source srcset="/_assets/designs/responsive/telescope--xs.jpg" media="(max-width: 480px)">
+											<img src="/_assets/designs/responsive/telescope--large.jpg" class="image" alt="title" />
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<source srcset="/_assets/designs/responsive/icecream--large.jpg" media="(min-width: 1024px)">
+											<source srcset="/_assets/designs/responsive/icecream--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source srcset="/_assets/designs/responsive/icecream--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source srcset="/_assets/designs/responsive/icecream--xs.jpg" media="(max-width: 480px)">
+											<img src="/_assets/designs/responsive/icecream--large.jpg" class="image" alt="title" />
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<source srcset="/_assets/designs/responsive/light--large.jpg" media="(min-width: 1024px)">
+											<source srcset="/_assets/designs/responsive/light--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source srcset="/_assets/designs/responsive/light--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source srcset="/_assets/designs/responsive/light--xs.jpg" media="(max-width: 480px)">
+											<img src="/_assets/designs/responsive/light--large.jpg" class="image" alt="title" />
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="contact wrapper">
+					<div class="wrapper__inner contact__content">
+						<h2 class="h2">
+							Talk about us
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+						</p>
+						<div class="contact__cta-block">
+							<a href="#" class="btn btn--facebook">
+								Share page
+							</a>
+							<a href="#" class="btn btn--twitter">
+								Tweet us
+							</a>
+							<a href="#" class="btn btn--instagram">
+								Follow on Instagram
+							</a>
+							<a href="#" class="btn btn--youtube">
+								Subscribe to YouTube
+							</a>
+						</div>
+					</div>
+				</section>
+				<footer class="contact wrapper wrapper--lightblue">
+					<div class="wrapper__inner contact__content">
+						<h2 class="h2">
+							Get in touch
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+						</p>
+						<div class="contact__cta-block">
+							<a href="#" class="btn btn--yellow">
+								Hire Me
+							</a>
+						</div>
+					</div>
+				</footer>
+			</article>
 		</main>
+		<div class="overlay"></div>
+		</div>
+		<script src="/_assets/scripts/main.js"></script>
 		<script>
-			(function() {
-				document.body.classList.remove('no-js');
-				document.body.classList.add('js');
-			}());
+			function LoadFont(url, className) {
+				$.get(url).done(function() {
+					$('html').addClass(className);
+				});
+			}
+
+			LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
+			LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
 		</script>
 	</body>
 </html>

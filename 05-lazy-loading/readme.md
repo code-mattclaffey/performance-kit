@@ -1,6 +1,6 @@
 # Lazy Loading
 
-Lazy loading is a great method to use for when you want to only load images in view i.e (the fold)[]. When you scroll through the page, images will load as they come into view.
+Lazy loading is a great method to use for when you want to only load images in view i.e [the fold](https://www.optimizely.com/optimization-glossary/above-the-fold/). When you scroll through the page, images will load as they come into view.
 
 Why is lazy loading so good?
 
@@ -8,50 +8,47 @@ Why is lazy loading so good?
 - Reduces the page weight
 - Removes any images from render blocking the page
 
-## Senario: Photograpghy website
+In our example we have 10 images on the page. The total file size is around `424kb` and it takes `10.26s` for the page to be fully loaded on a `Regular 3G (100ms, 750kb/s, 250kb/s)`.
 
-A photograpghy website is a very image heavy site because the images will be large files & there will be a lot of them displaying on the page.
 
-In this example I have 5 images on my page. The total file size is around `1.2mb` and it takes `13.90s` for the page to be fully loaded on a `regular 3G (100ms, 750kb/s, 250kb/s)`.
-
-## Solution
-
-HTML without lazy loading:
+I have used a tool called [LazySizes](https://github.com/aFarkas/lazysizes) in this example. It is really easy to setup all you have to do is add the script to the head of your document:
 
 ```html
-<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
-	<source srcset="/_assets/images/responsive/sunset--large.jpg" media="(min-width: 769px)">
-	<source srcset="/_assets/images/responsive/sunset--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-	<source srcset="/_assets/images/responsive/sunset--small.jpg" media="(max-width: 480px)">
-	<img src="/_assets/images/responsive/sunset--large.jpg" class="img" alt="Sunset photograpghy" />
-</picture>
-```
-
-I have used a tool call [LazySizes](https://github.com/aFarkas/lazysizes) in this example. It is really easy to setup all you have to do is add the script to the head of your document:
-
-```html
-  <script src="https://raw.githubusercontent.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
+  <script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
   <script>
     window.lazySizesConfig = window.lazySizesConfig || {};
   </script>
 ```
 
+HTML without lazy loading:
+
+```html
+<picture class="picture picture--xs-4x3">
+  <source srcset="/_assets/designs/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+  <source srcset="/_assets/designs/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+  <source srcset="/_assets/designs/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+  <source srcset="/_assets/designs/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+  <img src="/_assets/designs/responsive/blow-dryer--large.jpg" class="image" alt="title" />
+</picture>
+```
+
 HTML with lazy loading:
 
 ```html
-<picture class="picture picture--xs-4-x-3 picture--md-16-x-9">
+<picture class="picture picture--xs-4x3">
 	<!--[if IE 9]><video style="display: none;><![endif]-->
-	<source data-srcset="/_assets/images/responsive/sunset--large.jpg" media="(min-width: 769px)">
-	<source data-srcset="/_assets/images/responsive/sunset--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-	<source data-srcset="/_assets/images/responsive/sunset--small.jpg" media="(max-width: 480px)">
+	<source data-srcset="/_assets/designs/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+	<source data-srcset="/_assets/designs/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+	<source data-srcset="/_assets/designs/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+	<source data-srcset="/_assets/designs/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
 	<!--[if IE 9]></video><![endif]-->
-	<img data-src="/_assets/images/responsive/sunset--large.jpg" class="img lazyload" alt="Sunset photograpghy" />
-
+	<img data-src="/_assets/designs/responsive/blow-dryer--large.jpg" class="image lazyload" alt="title" />
 	<noscript>
-		<source srcset="/_assets/images/responsive/sunset--large.jpg" media="(min-width: 769px)">
-		<source srcset="/_assets/images/responsive/sunset--med.jpg" media="(min-width: 480px) and (max-width: 769px)">
-		<source srcset="/_assets/images/responsive/sunset--small.jpg" media="(max-width: 480px)">
-		<img src="/_assets/images/responsive/sunset--large.jpg" class="img" alt="Sunset photograpghy" />
+		<source srcset="/_assets/designs/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+		<source srcset="/_assets/designs/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+		<source srcset="/_assets/designs/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+		<source srcset="/_assets/designs/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+		<img src="/_assets/designs/responsive/blow-dryer--large.jpg" class="image" alt="title" />
 	</noscript>
 </picture>
 ```
@@ -72,21 +69,23 @@ Now we have our HTML setup, we now need to add in the css to get that fade in ef
 **Note:** The lazy loading may not work correctly if you do not set the correct sizes for your placeholders. Images that have no height will be loaded on the page at the wrong time because they may sit further up the fold.
 
 ## Results
-> Regular 3G (100ms, 750kb/s, 250kb/s)
+
+> Cable
 
 |Desktop Results     |      |       |
 |--------------------|:----:|:-----:|
-|Before              | 389ms| 13.90s|
-|After               | 550ms|  6.28s|
+|Before              | 816ms| 2.25s|
+|After               | 767ms|  1.34s|
 
+> Regular 3G (100ms, 750kb/s, 250kb/s)
 
 |Mobile Results      |      |       |
 |--------------------|:----:|:-----:|
-|Before              | 412ms|  8.42s|
-|After               | 494ms|  4.01s|
+|Before              | 1.15s|  10.26s|
+|After               | 1.08s|  9.19s|
 
-[Example of it in use - before.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/demos/04/before.html)
+[before lazy loading](http://performance-kit.surge.sh/04/after.html)
 
-[Example of it in use - after.html](https://cdm.rawgit/code-mattclaffey/performance-kit/master/demos/04/after.html)
+[after lazy loading](http://performance-kit.surge.sh/05/after.html)
 
 [Chapter 6 - Image Compression](https://github.com/code-mattclaffey/performance-kit/tree/master/06-Image-compression/readme.md)
