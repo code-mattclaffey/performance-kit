@@ -314,9 +314,6 @@ li {
 	width: 100%;
 }
 
-.latest-video .latest-video__block:first-child {
-	padding-right: var(--gutter-large);
-}
 @media (max-width: 48em) {
 	.latest-video__block {
 		margin: 0 auto;
@@ -328,6 +325,10 @@ li {
 	.latest-video__block {
 		text-align: left;
 		width: 50%;
+	}
+
+	.latest-video .latest-video__block:first-child {
+		padding-right: var(--gutter-large);
 	}
 }
 
