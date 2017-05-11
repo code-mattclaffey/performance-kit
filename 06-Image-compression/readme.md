@@ -27,4 +27,4 @@ Some CDN's have the ability for you to set the quality on the image url. On some
 For our client this has reduced the page weight from around 1.2mb of images to 900kb.
 
 
-[Chapter 7 - Webpack Analyser](https://github.com/code-mattclaffey/performance-kit/tree/master/07-webpack-analyser/readme.md)
+[Chapter 7 - Render Blocking Scripts](https://github.com/code-mattclaffey/performance-kit/tree/master/07-webpack-analyser/readme.md)
