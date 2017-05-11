@@ -32,6 +32,12 @@ As you can see the `lemonbird-regular-webfont` is loading quite late. We need to
 <link rel="prefetch" href="/_assets/fonts/lemonbird-regular-webfont.ttf">
 ```
 
+We have gone from the hello text looking ugly:
+
+![After.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-fouc-vs-foic/screenshots/FOUC.png)
+
+to:
+
 ![Filmstrip](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-preload/screenshots/film-strip-preload.png)
 
 [Chapter 10 - Preconnect](https://github.com/code-mattclaffey/performance-kit/tree/master/10-preconnect/readme.md)
