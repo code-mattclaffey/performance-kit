@@ -1,11 +1,7 @@
 # Render Blocking Scripts
 jQuery jQuery jQuery.... such a love hate relationship I have with jQuery. Love side, I really like the simplicity of it. Hate side, It is quite a large file & it has to load in the head of the page if you have third party scripts that rely on it.
 
-This improvement would depend on if you had any third party scripts that relied on jQuery being loaded before it has or not. If you dont then we can do either of these:
-
-- Async jQuery
-- Load it at the bottom of the body tag
-- Use a Utility Class that has all common jQuery functions you would use day to day.
+This improvement would depend on if you had any third party scripts that relied on jQuery being loaded before it has or not.
 
 ## Async jQuery
 
