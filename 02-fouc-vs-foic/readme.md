@@ -10,7 +10,7 @@ In my personal opinion, I believe that FOUC is better than FOIC for one simple r
 
 ## Implementing FOUC
 
-In [our example](http://performance-kit.surge.sh/02/before.html) we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are just including the font family striaght into the css file:
+In [our example](http://performance-kit.surge.sh/01/after.html) we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are just including the font family striaght into the css file:
 
 ```css
 body {
