@@ -14,10 +14,6 @@
 
 	var $el_nav_btn = $('[' + NAV_TOGGLE + ']');
 
-	function is_touch_device() {
-		return 'ontouchstart' in window || navigator.maxTouchPoints;
-	};
-
 	function toggleNavState(event) {
 		event.preventDefault();
 
@@ -27,10 +23,6 @@
 		navState === 'open' ? $el_body.attr(NAV_STATE, '') : $el_body.attr(NAV_STATE, 'open');
 	}
 
-	if(is_touch_device()) {
-		$el_nav_btn.on('tap', toggleNavState);
-	} else {
-		$el_nav_btn.on('click', toggleNavState);
-	}
+	$el_nav_btn.on('click', toggleNavState);
 
 }());

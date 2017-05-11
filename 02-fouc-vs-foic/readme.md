@@ -147,7 +147,7 @@ I found this pretty handy especially if you work on a project that uses `font-fa
 
 Measuring the value for this would be to get a film strip from [Web Page Test](https://www.webpagetest.org) and then get another film strip after the implementation. Once you have the comparison you can show the client/project manager the improvement for extra brownie points. :wink:
 
-**Tip:** - click the capture screenshots button to view a filmstrip of the page load.
+**Tip:** - in DevTools use the capture screenshots button to view a filmstrip of the page load. This is similliar to Web Page Test but not as accurate.
 
 
 ## Results
