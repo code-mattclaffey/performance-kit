@@ -4,9 +4,20 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title> Original </title>
+
+		<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+		<link rel="dns-prefetch" href="//google.com">
+		<link rel="dns-prefetch" href="//cdn.rawgit.com">
+		<link rel="dns-prefetch" href="//code.jquery.com">
+		<link rel="dns-prefetch" href="//fonts.gstatic.com">
+		<link rel="dns-prefetch" href="//static.doubleclick.net">
+		<link rel="dns-prefetch" href="//i.ytimg.com">
+		<link rel="dns-prefetch" href="//s.ytimg.com">
+
 		<link rel="preload" href="/_assets/fonts/lemonbird-regular-webfont.ttf">
 		<link rel="prefetch" href="/_assets/fonts/lemonbird-regular-webfont.ttf">
-		<link href="/_assets/css/05/styles.css" rel="stylesheet">
+		<link rel="prefetch" href="/_assets/images/youtube-button-black.png">
+		<link href="/_assets/css/10/styles.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js" async></script>
 		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
 		<script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
@@ -107,9 +118,20 @@
 							<!--
 								Youtube component here
 							-->
-							<div class="picture picture--xs-16x9 picture--md-4x3">
-								<iframe class="iframe" src="https://www.youtube.com/embed/OUB6zKc-Tos" frameborder="0" allowfullscreen></iframe>
+							<div class="youtube picture picture--xs-16x9 picture--md-4x3" data-youtube>
+								<img data-src="https://i.ytimg.com/vi/OUB6zKc-Tos/sddefault.jpg" class="image lazyload" alt="Our Wedding"/>
+								<noscript>
+									<img src="https://i.ytimg.com/vi/OUB6zKc-Tos/sddefault.jpg" class="image" alt="Our Wedding"/>
+								</noscript>
+								<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/OUB6zKc-Tos">
+									Play YouTube Video...
+								</button>
 							</div>
+							<noscript>
+								<div class="picture picture--xs-16x9 picture--md-4x3">
+									<iframe class="iframe" src="https://www.youtube.com/embed/OUB6zKc-Tos"></iframe>
+								</div>
+							</noscript>
 						</div>
 					</div>
 				</section>
@@ -282,7 +304,7 @@
 		(function() {
 			window.addEventListener('load', function() {
 				var script = document.createElement('script');
-				script.src = '/_assets/scripts/07/main.js';
+				script.src = '/_assets/scripts/10/main.js';
 
 				document.body.appendChild(script);
 			});

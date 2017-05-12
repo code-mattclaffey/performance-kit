@@ -39,3 +39,31 @@
 	LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
 	LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
 }());
+
+(function() {
+	'use strict';
+
+	var $el_youtube = $('[data-youtube]');
+
+
+	var YouTubeComponent = function($component, i) {
+		var buttons = $component.find('[data-youtube-button]');
+
+		function createIframe(event) {
+			var url = $(event.target).attr('data-youtube-button');
+
+			var htmlString = '<div class="picture picture--xs-16x9 picture--md-4x3"> <iframe class="iframe" src="' + url + '?autoplay=1"></iframe></div>';
+
+			$component.hide();
+			$component.before(htmlString);
+			$component.remove();
+		}
+
+		buttons.on('click', createIframe);
+	}
+
+	$el_youtube.each(function(i, el) {
+		YouTubeComponent($(el), i);
+	});
+
+}());
