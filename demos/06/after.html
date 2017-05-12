@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title> Original </title>
+		<title> Render Blocking Resource </title>
 		<link href="/_assets/css/05/styles.css" rel="stylesheet">
-		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.3.min.js" async></script>
 		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
 		<script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
   	<script>
@@ -276,16 +276,15 @@
 		</main>
 		<div class="overlay"></div>
 		</div>
-		<script src="/_assets/scripts/main.js"></script>
 		<script>
-			function LoadFont(url, className) {
-				$.get(url).done(function() {
-					$('html').addClass(className);
-				});
-			}
+		(function() {
+			window.addEventListener('load', function() {
+				var script = document.createElement('script');
+				script.src = '/_assets/scripts/07/main.js';
 
-			LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
-			LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
+				document.body.appendChild(script);
+			});
+		}());
 		</script>
 	</body>
 </html>

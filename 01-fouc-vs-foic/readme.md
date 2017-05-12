@@ -149,12 +149,12 @@ FOIC content did not appear on the page until 3.96s seconds whereas with FOUC ou
 
 Before.html
 
-![Before.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-fouc-vs-foic/screenshots/FOIC.png)
+![Before.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/01-fouc-vs-foic/screenshots/FOIC.png)
 
 After.html
 
-![After.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-fouc-vs-foic/screenshots/FOUC.png)
+![After.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/01-fouc-vs-foic/screenshots/FOUC.png)
 
-[Chapter 03 - Hidden Images](https://github.com/code-mattclaffey/performance-kit/tree/master/03-hidden-images/readme.md)
+[Chapter 2 - Hidden Images](https://github.com/code-mattclaffey/performance-kit/tree/master/02-hidden-images/readme.md)
 
 

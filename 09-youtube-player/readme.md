@@ -1,7 +1,7 @@
 # YouTube Player
 Now we have a really fast time first to byte, we can now focus on that long page load we've got going on. Adding a YouTube component straight into the page can be easily done without hesitation. YouTube does not render block the page but the page load does take a big hit from all of the assets YouTube is bringing with it.
 
-In the [previous example](http://performance-kit.surge.sh/10/after.html) we have all of these assets loading from YouTube:
+In the [previous example](http://performance-kit.surge.sh/08/after.html) we have all of these assets loading from YouTube:
 
 - OUB6zKc-Tos - 22.5kb (11.5kb Gzip)
 - www-embed-player-sprite-mode-2x.css 256kb (43.4kb Gzip)
@@ -165,11 +165,11 @@ iframe fallback:
 ## How to measure the value
 In our previous example our page load was:
 
-![Youtube Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-youtube-player/screenshots/youtube-before.png)
+![Youtube Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-youtube-player/screenshots/youtube-before.png)
 
 now it is:
 
-![Youtube After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-youtube-player/screenshots/youtube-after.png)
+![Youtube After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-youtube-player/screenshots/youtube-after.png)
 
 
-[Chapter 11 - Woff2](https://github.com/code-mattclaffey/performance-kit/tree/master/11-woff2/readme.md)
+[Chapter 10 - Woff2](https://github.com/code-mattclaffey/performance-kit/tree/master/10-woff2/readme.md)

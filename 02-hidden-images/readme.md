@@ -9,7 +9,7 @@ In some senarios, we may need to hide an image for a certain breakpoint. Sometim
 
 `On desktop I would like to see  images in the navigation but have images hidden on mobile...` - I know right :persevere:
 
-In [our example](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/03) the HTML would look something like this:
+In [our example](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/02) the HTML would look something like this:
 
 ```html
 
@@ -30,7 +30,7 @@ In [our example](https://github.com/code-mattclaffey/performance-kit/tree/master
 - Creating wasteful page weight on mobile
 - Adding a wasted http requests to the page
 
-![Before.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/03-hidden-images/screenshots/before-html-network.png)
+![Before.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-hidden-images/screenshots/before-html-network.png)
 
 ## The Solution
 Each image is around 56kb-100kb. THAT'S 211kb loading on mobile which is a complete waste & its a render blocking resource. :worried:
@@ -58,11 +58,11 @@ We can use the picture element to our advantage here using a source element like
 
 We have now cut down that page weight on mobile from 487kb to just 276kb & 10 requests to 8 request.
 
-![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/03-hidden-images/screenshots/after-html-network.png)
+![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-hidden-images/screenshots/after-html-network.png)
 
-[Example of it in use - before.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/02/after.html)
+[Example of it in use - before.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/01/after.html)
 
-[Example of it in use - after.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/03/after.html)
+[Example of it in use - after.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/02/after.html)
 
 
-[Chapter 4 - Responsive Images](https://github.com/code-mattclaffey/performance-kit/tree/master/04-responsive-images/readme.md)
+[Chapter 3 - Responsive Images](https://github.com/code-mattclaffey/performance-kit/tree/master/03-responsive-images/readme.md)

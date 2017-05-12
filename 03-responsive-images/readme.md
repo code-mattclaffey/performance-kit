@@ -21,13 +21,13 @@ This will make my picture elements look like:
 	</picture>
 ```
 
-![No Placeholder](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/04-responsive-images/screenshots/no-placeholder.png)
+![No Placeholder](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/03-responsive-images/screenshots/no-placeholder.png)
 
 Next we need to add a placeholder background to represent the size of the image when the image has not loaded yet. Adding a placeholder will prevent the browser from triggering a layout change when the image has loaded. When we are looking at our website on a slow connection we will see something that represents an image rather than a white screen.
 
 After:
 
-![With Placeholder](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/04-responsive-images/screenshots/with-placeholder.png)
+![With Placeholder](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/03-responsive-images/screenshots/with-placeholder.png)
 
 Here is an example to how the css works for image placeholders:
 
@@ -85,4 +85,4 @@ This will now add the padding top which will represent the size of the image. Th
 }
 ```
 
-[Our example](http://performance-kit.surge.sh/04/after.html) does not show a massive improvement because the images are roughly the same sizes on each breakpoint. However we won't have to worry about that too much - [Chapter 5 - Lazy Loading](https://github.com/code-mattclaffey/performance-kit/tree/master/05-lazy-loading/readme.md)
+[Our example](http://performance-kit.surge.sh/03/after.html) does not show a massive improvement because the images are roughly the same sizes on each breakpoint. However we won't have to worry about that too much - [Chapter 4 - Lazy Loading](https://github.com/code-mattclaffey/performance-kit/tree/master/04-lazy-loading/readme.md)

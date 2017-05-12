@@ -84,8 +84,8 @@ Now we have our HTML setup, we now need to add in the css to get that fade in ef
 |Before              | 1.15s|  10.26s|
 |After               | 1.08s|  9.19s|
 
-[before lazy loading](http://performance-kit.surge.sh/04/after.html)
+[before lazy loading](http://performance-kit.surge.sh/03/after.html)
 
-[after lazy loading](http://performance-kit.surge.sh/05/after.html)
+[after lazy loading](http://performance-kit.surge.sh/04/after.html)
 
-[Chapter 6 - Image Compression](https://github.com/code-mattclaffey/performance-kit/tree/master/06-Image-compression/readme.md)
+[Chapter 5 - Image Compression](https://github.com/code-mattclaffey/performance-kit/tree/master/05-Image-compression/readme.md)

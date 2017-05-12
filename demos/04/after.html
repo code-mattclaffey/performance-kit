@@ -3,10 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title> Original </title>
-		<link href="/_assets/css/02/styles.css" rel="stylesheet">
+		<title> Lazy Loading </title>
+		<link href="/_assets/css/05/styles.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
+		<script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
+  	<script>
+    	window.lazySizesConfig = window.lazySizesConfig || {};
+  	</script>
 	</head>
 	<body class="no-js" data-nav-state>
 		<div id="open-nav">
@@ -19,9 +23,17 @@
 					<li>
 						<a href="#" class="site-header__nav-link">
 							<picture class="site-header__nav-image">
-								<source srcset="/_assets/images/home.jpg" media="(min-width: 48em)">
-								<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
-								<img class="image" src="/_assets/images/home.jpg" alt="Home"/>
+								<!--[if IE 9]><video style="display: none;><![endif]-->
+								<source data-srcset="/_assets/images/home.jpg" media="(min-width: 48em)">
+								<source data-srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+								<!--[if IE 9]></video><![endif]-->
+								<img class="image lazyload" data-src="/_assets/images/home.jpg" alt="Home"/>
+
+								<noscript>
+									<source srcset="/_assets/images/home.jpg" media="(min-width: 48em)">
+									<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+									<img class="image" src="/_assets/images/home.jpg" alt="Home"/>
+								</noscript>
 							</picture>
 							Home
 						</a>
@@ -29,9 +41,16 @@
 					<li>
 						<a href="#" class="site-header__nav-link">
 							<picture class="site-header__nav-image">
-								<source srcset="/_assets/images/portfolio.jpg" media="(min-width: 48em)">
-								<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
-								<img class="image" src="/_assets/images/portfolio.jpg" alt="Home"/>
+								<!--[if IE 9]><video style="display: none;><![endif]-->
+								<source data-srcset="/_assets/images/portfolio.jpg" media="(min-width: 48em)">
+								<source data-srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+								<!--[if IE 9]></video><![endif]-->
+								<img class="image lazyload" data-src="/_assets/images/portfolio.jpg" alt="portfolio"/>
+								<noscript>
+									<source srcset="/_assets/images/portfolio.jpg" media="(min-width: 48em)">
+									<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+									<img class="image" src="/_assets/images/portfolio.jpg" alt="portfolio"/>
+								</noscript>
 							</picture>
 							Portfolio
 						</a>
@@ -39,9 +58,16 @@
 					<li>
 						<a href="#" class="site-header__nav-link">
 							<picture class="site-header__nav-image">
-								<source srcset="/_assets/images/blog.jpg" media="(min-width: 48em)">
-								<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
-								<img class="image" src="/_assets/images/blog.jpg" alt="Home"/>
+								<!--[if IE 9]><video style="display: none;><![endif]-->
+								<source data-srcset="/_assets/images/blog.jpg" media="(min-width: 48em)">
+								<source data-srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+								<!--[if IE 9]></video><![endif]-->
+								<img class="image lazyload" data-src="/_assets/images/blog.jpg" alt="Home"/>
+								<noscript>
+									<source srcset="/_assets/images/blog.jpg" media="(min-width: 48em)">
+									<source srcset="/_assets/images/image-hidden.jpg" media="(max-width: 48em)">
+									<img class="image" src="/_assets/images/blog.jpg" alt="blog"/>
+								</noscript>
 							</picture>
 							Blog
 						</a>
@@ -93,11 +119,20 @@
 								<div class="card">
 									<figure>
 										<picture class="picture picture--xs-4x3">
-											<source srcset="/_assets/images/responsive/bbq--large.jpg" media="(min-width: 1024px)">
-											<source srcset="/_assets/images/responsive/bbq--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-											<source srcset="/_assets/images/responsive/bbq--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-											<source srcset="/_assets/images/responsive/bbq--xs.jpg" media="(max-width: 480px)">
-											<img src="/_assets/images/responsive/bbq--large.jpg" class="image" alt="title" />
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images/responsive/bbq--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images/responsive/bbq--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images/responsive/bbq--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images/responsive/bbq--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images/responsive/bbq--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images/responsive/bbq--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images/responsive/bbq--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images/responsive/bbq--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images/responsive/bbq--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images/responsive/bbq--large.jpg" class="image" alt="title" />
+											</noscript>
 										</picture>
 										<figcaption class="card__heading">Title</figcaption>
 									</figure>
@@ -107,11 +142,20 @@
 								<div class="card">
 									<figure>
 										<picture class="picture picture--xs-4x3">
-											<source srcset="/_assets/images/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
-											<source srcset="/_assets/images/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-											<source srcset="/_assets/images/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-											<source srcset="/_assets/images/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
-											<img src="/_assets/images/responsive/blow-dryer--large.jpg" class="image" alt="title" />
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images/responsive/blow-dryer--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images/responsive/blow-dryer--large.jpg" class="image" alt="title" />
+											</noscript>
 										</picture>
 										<figcaption class="card__heading">Title</figcaption>
 									</figure>
@@ -121,11 +165,20 @@
 								<div class="card">
 									<figure>
 										<picture class="picture picture--xs-4x3">
-											<source srcset="/_assets/images/responsive/telescope--large.jpg" media="(min-width: 1024px)">
-											<source srcset="/_assets/images/responsive/telescope--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-											<source srcset="/_assets/images/responsive/telescope--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-											<source srcset="/_assets/images/responsive/telescope--xs.jpg" media="(max-width: 480px)">
-											<img src="/_assets/images/responsive/telescope--large.jpg" class="image" alt="title" />
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images/responsive/telescope--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images/responsive/telescope--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images/responsive/telescope--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images/responsive/telescope--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images/responsive/telescope--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images/responsive/telescope--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images/responsive/telescope--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images/responsive/telescope--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images/responsive/telescope--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images/responsive/telescope--large.jpg" class="image" alt="title" />
+											</noscript>
 										</picture>
 										<figcaption class="card__heading">Title</figcaption>
 									</figure>
@@ -135,11 +188,20 @@
 								<div class="card">
 									<figure>
 										<picture class="picture picture--xs-4x3">
-											<source srcset="/_assets/images/responsive/icecream--large.jpg" media="(min-width: 1024px)">
-											<source srcset="/_assets/images/responsive/icecream--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-											<source srcset="/_assets/images/responsive/icecream--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-											<source srcset="/_assets/images/responsive/icecream--xs.jpg" media="(max-width: 480px)">
-											<img src="/_assets/images/responsive/icecream--large.jpg" class="image" alt="title" />
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images/responsive/icecream--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images/responsive/icecream--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images/responsive/icecream--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images/responsive/icecream--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images/responsive/icecream--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images/responsive/icecream--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images/responsive/icecream--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images/responsive/icecream--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images/responsive/icecream--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images/responsive/icecream--large.jpg" class="image" alt="title" />
+											</noscript>
 										</picture>
 										<figcaption class="card__heading">Title</figcaption>
 									</figure>
@@ -149,11 +211,20 @@
 								<div class="card">
 									<figure>
 										<picture class="picture picture--xs-4x3">
-											<source srcset="/_assets/images/responsive/light--large.jpg" media="(min-width: 1024px)">
-											<source srcset="/_assets/images/responsive/light--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-											<source srcset="/_assets/images/responsive/light--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
-											<source srcset="/_assets/images/responsive/light--xs.jpg" media="(max-width: 480px)">
-											<img src="/_assets/images/responsive/light--large.jpg" class="image" alt="title" />
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images/responsive/light--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images/responsive/light--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images/responsive/light--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images/responsive/light--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images/responsive/light--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images/responsive/light--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images/responsive/light--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images/responsive/light--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images/responsive/light--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images/responsive/light--large.jpg" class="image" alt="title" />
+											</noscript>
 										</picture>
 										<figcaption class="card__heading">Title</figcaption>
 									</figure>
