@@ -1,5 +1,5 @@
 # YouTube Player
-Now we have a really fast First time to byte we can now focus on the long page load. Adding a YouTube component straight into the page can be easily done without hasitation. YouTube does not render block the page but the page load does take a big hit from all of the assets YouTube is bringing with it.
+Now we have a really fast time first to byte, we can now focus on that long page load we've got going on. Adding a YouTube component straight into the page can be easily done without hesitation. YouTube does not render block the page but the page load does take a big hit from all of the assets YouTube is bringing with it.
 
 In the [previous example](http://performance-kit.surge.sh/10/after.html) we have all of these assets loading from YouTube:
 
