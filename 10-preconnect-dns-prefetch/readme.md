@@ -5,7 +5,7 @@ Before we talk about Preconnect we need to know what a DNS prefetch is. DNS pref
 Preconnect is an extension of DNS prefetch but it will make the TCP handshake and optional TLS negotiation.
 
 ## Preconnect Browser Support
-![Browser Support for preconnect](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect/screenshots/preconnect.png)
+![Browser Support for preconnect](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/preconnect.png)
 
 Like preload, it is not massively support everywhere yet but it is under consideration in the at [MS](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/preconnectresourcehints/).
 
@@ -13,7 +13,7 @@ Like preload, it is not massively support everywhere yet but it is under conside
 
 The browser bupport is a lot better than preconnect so for now we are going to use this method instead until preconnect is more widely supported.
 
-![Browser Support for dns-prefetch](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect/screenshots/dns-prefetch.png)
+![Browser Support for dns-prefetch](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/dns-prefetch.png)
 
 We have a couple of assets that are loaded in from a different URL:
 
@@ -38,9 +38,9 @@ Since preconnect & dns-prefetch will reduce the round trips it makes to other UR
 
 If you put [our previous example](http://performance-kit.surge.sh/09/after.html) in webpage test and look at the connection view we have our dns lookups happening at different times.
 
-![Connection view before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect/screenshots/connection-view-before.png)
+![Connection view before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/connection-view-before.png)
 
-![Connection view after](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect/screenshots/connection-view-before.png)
+![Connection view after](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/connection-view-before.png)
 
 As you can see the DNS lookups all start early on. This have reduce our page load by **1.3s**.
 
