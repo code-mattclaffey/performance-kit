@@ -162,4 +162,14 @@ iframe fallback:
 </noscript>
 ```
 
+## How to measure the value
+In our previous example our page load was:
+
+![Youtube Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-youtube-player/screenshots/youtube-before.png)
+
+now it is:
+
+![Youtube After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-youtube-player/screenshots/youtube-after.png)
+
+
 [Chapter 11 - Cleanup](https://github.com/code-mattclaffey/performance-kit/tree/master/11-cleanup/readme.md)
