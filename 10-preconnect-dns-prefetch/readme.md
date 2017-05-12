@@ -40,7 +40,7 @@ If you put [our previous example](http://performance-kit.surge.sh/09/after.html)
 
 ![Connection view before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/connection-view-before.png)
 
-![Connection view after](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/connection-view-before.png)
+![Connection view after](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/connection-view-after.png)
 
 As you can see the DNS lookups all start early on. This have reduce our page load by **1.3s**.
 
