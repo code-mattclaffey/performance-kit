@@ -36,7 +36,7 @@ I like this approach because we do not see half an image loading on the page. We
 ## Webp
 Webp is a fairly new image format for the web that provides better lossless and lossy compression for images on the web. This is quite new Webp so the browser support is not amazing. :worried:
 
-![WebP Browser Support](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/05-image-compression/screenshots/webp-browser-support.png)
+![WebP Browser Support](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/05-image-compression/screenshots/webp-bs.png)
 
 
 WebP can dramatically reduce our page weight down just from changing the format:

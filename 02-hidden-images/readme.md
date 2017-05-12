@@ -60,9 +60,4 @@ We have now cut down that page weight on mobile from 487kb to just 276kb & 10 re
 
 ![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-hidden-images/screenshots/after-html-network.png)
 
-[Example of it in use - before.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/01/after.html)
-
-[Example of it in use - after.html](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/02/after.html)
-
-
 [Chapter 3 - Responsive Images](https://github.com/code-mattclaffey/performance-kit/tree/master/03-responsive-images/readme.md)

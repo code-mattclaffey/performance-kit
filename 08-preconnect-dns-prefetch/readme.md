@@ -46,7 +46,7 @@ After:
 
 As you can see the DNS lookups all start early on. This have reduce our page load by **1.3s**.
 
-[Chapter 10 - YouTube Player](https://github.com/code-mattclaffey/performance-kit/tree/master/08-youtube-player/readme.md)
+[Chapter 10 - YouTube Player](https://github.com/code-mattclaffey/performance-kit/tree/master/09-youtube-player/readme.md)
 
 
 [Useful article on resourec hints](https://www.keycdn.com/blog/resource-hints/)

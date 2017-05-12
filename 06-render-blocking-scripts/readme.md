@@ -34,12 +34,12 @@ This really makes a big impact on our website. Here is an example of what our fi
 
 Before:
 
-![Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/06-render-blocking-scripts/screenshots/render-blocking-scripts-before.png)
+![Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/12-final/filmstrips/05-filmstrip.png)
 
 
 After:
 
-![After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/06-render-blocking-scripts/screenshots/render-blocking-scripts-after.png)
+![After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/12-final/filmstrips/06-filmstrip.png)
 
 
 [Chapter 7 - Preload](https://github.com/code-mattclaffey/performance-kit/tree/master/07-preload/readme.md)

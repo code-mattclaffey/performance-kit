@@ -2,10 +2,10 @@
 Using Woff & Woff2 instead of tff makes a massive improvement to our page weight.
 
 ## Browser Support on Woff
-![Browser Support Woff](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-woff2/screenshots/woff-bs.png)
+![Browser Support Woff](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-woff2/screenshots/woff.png)
 
 ## Browser Support on Woff2
-![Browser Support Woff2](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-woff2/screenshots/woff2-bs.png)
+![Browser Support Woff2](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-woff2/screenshots/woff2.png)
 
 ## Implementation
 We need to remove the ttf preload. The next task would be to move our LoadFont Javascript to the head of the page.

@@ -167,9 +167,16 @@ In our previous example our page load was:
 
 ![Youtube Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-youtube-player/screenshots/youtube-before.png)
 
+![Youtube Before Filmstrip](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/12-final/filmstrips/08-filmstrip.png)
+
+
+
 now it is:
 
 ![Youtube After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-youtube-player/screenshots/youtube-after.png)
+
+![Youtube After Filmstrip](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/12-final/filmstrips/09-filmstrip.png)
+
 
 
 [Chapter 10 - Woff2](https://github.com/code-mattclaffey/performance-kit/tree/master/10-woff2/readme.md)
