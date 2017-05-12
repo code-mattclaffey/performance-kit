@@ -172,4 +172,4 @@ now it is:
 ![Youtube After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-youtube-player/screenshots/youtube-after.png)
 
 
-[Chapter 11 - Cleanup](https://github.com/code-mattclaffey/performance-kit/tree/master/11-cleanup/readme.md)
+[Chapter 11 - Woff2](https://github.com/code-mattclaffey/performance-kit/tree/master/11-woff2/readme.md)
