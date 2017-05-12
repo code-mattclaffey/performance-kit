@@ -6,7 +6,7 @@ On our site we are using [gulp-imagemin](https://www.npmjs.com/package/gulp-imag
 - gulp-imagemin
 - kraken.io
 
-In our example we have made a nice 44kb reduction on our page without the quality defects.
+In our example we have made a nice 44kb reduction on our page without the quality defects but there're is a lot more we can do with the images before we pass them through imagemin.
 
 ```js
 gulp.task('imagemin', function() {
