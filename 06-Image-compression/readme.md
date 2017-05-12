@@ -49,6 +49,8 @@ Original - 81kb
 
 WebP - 27kb
 
-WebP is clearly something to look into soon in the future. It does not look like
+WebP is clearly something to look into soon in the future. It does not look like MS is planning to add in anytime soon.
+
+[Support on WebP](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webpimageformat/)
 
 [Chapter 7 - Render Blocking Scripts](https://github.com/code-mattclaffey/performance-kit/tree/master/07-render-blocking-scripts/readme.md)
