@@ -1,16 +1,15 @@
 # FOUC vs FOIC
 
 ## FOIC (“flash of invisible content”)
-In a nutshell, FOIC is when your browser is loading a font it does not have. While this is happening, the browser will paint all the text but it will appear hidden on the page until the font has loaded. Once loaded, the browser will re-paint & re-layout the text correctly. [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif)
+In a nutshell, FOIC is when your browser is loading a font it does not have. While this is happening, the browser will paint all the text but it will appear hidden on the page until the font has loaded. Once loaded, the browser will re-paint & re-layout the text correctly. <a href="https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif" target="_blank">See Example</a>
 
 ## FOUC (“flash of unstyled content”)
-FOUC paints the fallback font and waits until the font has loaded. Once loaded the browser will re-paint. [See example](https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif)
+FOUC paints the fallback font and waits until the font has loaded. Once loaded the browser will re-paint. <a href="https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif" target="_blank">See Example</a>
 
 In my personal opinion, I believe that FOUC is better than FOIC for one simple reason. We are getting the content to the user faster and we are progressively enhancing our website by serving our fallback font first.
 
 ## Implementing FOUC
-
-In [our example](http://performance-kit.surge.sh/01/after.html) we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are just including the font family striaght into the css file:
+In <a href="http://performance-kit.surge.sh/01/after.html" target="_blank">our example</a> we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are just including the font family striaght into the css file:
 
 ```css
 body {
@@ -66,7 +65,7 @@ LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
 
 ## Implementing FOUC with Typekit
 
-Typekit makes FOUC really easy to implement. The library has [font events](https://helpx.adobe.com/typekit/using/font-events.html) that adds the class name `wf-active` to the html element. All we need to do is wrap the `wf-active` class around our elements that use requires the font.
+Typekit makes FOUC really easy to implement. The library has <a href="http://performance-kit.surge.sh/01/after.html" target="_blank">font events</a> that adds the class name `wf-active` to the html element. All we need to do is wrap the `wf-active` class around our elements that use requires the font.
 
 ```css
 body,
@@ -138,7 +137,7 @@ I found this pretty handy especially if you work on a project that uses `font-fa
 
 ## How to measure the value
 
-Measuring the value for this would be to compare a before/after film strip from [Web Page Test](https://www.webpagetest.org).
+Measuring the value for this would be to compare a before/after film strip from <a href="http://performance-kit.surge.sh/01/after.html">Web Page Tes</a>
 
 **Tip:** - in DevTools use the capture screenshots button to view a filmstrip of the page load. This is similliar to Web Page Test but not as accurate.
 
