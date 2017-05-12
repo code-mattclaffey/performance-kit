@@ -40,4 +40,4 @@ to:
 
 ![Filmstrip](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-preload/screenshots/film-strip-preload.png)
 
-[Chapter 10 - Preconnect](https://github.com/code-mattclaffey/performance-kit/tree/master/10-preconnect/readme.md)
+[Chapter 10 - Preconnect & DNS Prefetch](https://github.com/code-mattclaffey/performance-kit/tree/master/10-preconnect-dns-prefetch/readme.md)
