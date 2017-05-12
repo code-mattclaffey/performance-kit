@@ -42,4 +42,4 @@ After:
 ![After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/07-render-blocking-scripts/screenshots/render-blocking-scripts-after.png)
 
 
-[Chapter 8 - YouTube Player](https://github.com/code-mattclaffey/performance-kit/tree/master/08-youtube-player/readme.md)
+[Chapter 8 - Preload](https://github.com/code-mattclaffey/performance-kit/tree/master/08-preload/readme.md)

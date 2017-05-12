@@ -1,6 +1,6 @@
 # Preconnect & DNS Prefetch
 
-Before we talk about Preconnect we need to know what a DNS prefetch is. DNS prefetch alerts the browser that there is an asset we will need later from a specific URL so the browser can resolve the DNS as quickly as it can. This is useful to use with any external libraries or third party scripts becuase the DNS prefetch can warm up these connections before they get requested therefore reducing how long it takes to request them.
+Before we talk about Preconnect we need to know what a DNS prefetch is. DNS prefetch alerts the browser that there is an asset we will need later from a specific URL so the browser can resolve the DNS as quickly as it can. This is useful to use with any external libraries or third party scripts because the DNS prefetch can warm up the connections before they are requested.
 
 Preconnect is an extension of DNS prefetch but it will make the TCP handshake and optional TLS negotiation.
 
@@ -11,7 +11,7 @@ Like preload, it is not massively support everywhere yet but it is under conside
 
 ## DNS Prefetch Browser Support
 
-The browser bupport is a lot better than preconnect so for now we are going to use this method instead until preconnect is more widely supported.
+The browser support is a lot better than preconnect so for now we are going to use dns-prefetch instead until preconnect is more widely supported.
 
 ![Browser Support for dns-prefetch](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-preconnect-dns-prefetch/screenshots/dns-prefetch.png)
 
@@ -46,7 +46,7 @@ After:
 
 As you can see the DNS lookups all start early on. This have reduce our page load by **1.3s**.
 
-[Chapter 11 - Cleanup](https://github.com/code-mattclaffey/performance-kit/tree/master/11-cleanup/readme.md)
+[Chapter 10 - YouTube Player](https://github.com/code-mattclaffey/performance-kit/tree/master/10-youtube-player/readme.md)
 
 
 [Useful article on resourec hints](https://www.keycdn.com/blog/resource-hints/)
