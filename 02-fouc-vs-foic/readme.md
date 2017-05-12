@@ -156,3 +156,4 @@ After.html
 ![After.html](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-fouc-vs-foic/screenshots/FOUC.png)
 
 [Chapter 03 - Hidden Images](https://github.com/code-mattclaffey/performance-kit/tree/master/03-hidden-images/readme.md)
+
