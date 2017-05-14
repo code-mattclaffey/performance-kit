@@ -145,7 +145,7 @@ Measuring the value for this would be to compare a before/after film strip from 
 
 ## Results
 
-FOIC content did not appear on the page until 3.96s seconds whereas with FOUC our content appear in 1.01 seconds.
+FOIC content did not appear on the page until 5.5 seconds whereas with FOUC our content appear in 4.5 seconds.
 
 Before.html
 

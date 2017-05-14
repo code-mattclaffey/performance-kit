@@ -7,9 +7,9 @@ Even though these images are hidden visually, they are still being requested & d
 
 In some senarios, we may need to hide an image for a certain breakpoint. Sometimes we might get something like this:
 
-`On desktop I would like to see  images in the navigation but have images hidden on mobile...` - I know right :persevere:
+`On desktop I would like to see images in the navigation but have images hidden on mobile...` - I know right :persevere:
 
-In [our example](https://github.com/code-mattclaffey/performance-kit/tree/master/demos/02) the HTML would look something like this:
+In [our previous example](http://performance-kit.surge.sh/01/after.html) the HTML would look something like this:
 
 ```html
 
@@ -56,7 +56,7 @@ We can use the picture element to our advantage here using a source element like
   <script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
 ```
 
-We have now cut down that page weight on mobile from 487kb to just 276kb & 10 requests to 8 request.
+We have now cut down the image page weight on mobile from 487kb to just 276kb & 10 requests to 8 request.
 
 ![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-hidden-images/screenshots/after-html-network.png)
 
