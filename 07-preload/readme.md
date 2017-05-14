@@ -6,9 +6,9 @@ Preload is a great way to get an asset to load in priority over the other assets
 
 ![Preloading browser support](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/07-preload/screenshots/preload-bs.png)
 
-Preload is not yet widely supported by most browsers however it is something that should still be implemented as it will do nothing if the browser does not support it. Always think to yourself "How well does it fail?". Adding preload into the solution does not break the page if it isnt supported. The browser will just ignore it.
-
 [Preload Browser Support](http://caniuse.com/#search=preload)
+
+Preload is not yet widely supported by most browsers however it is something that should still be implemented as it will do nothing if the browser does not support it. Always think to yourself "How well does it fail?". Adding preload into the solution does not break the page if it isnt supported. The browser will just ignore it.
 
 
 ## Prefetching
