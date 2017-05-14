@@ -11,7 +11,7 @@ This collection of tutorials are based from my learnings from client projects. I
 
 ## Testing platform
 
-When testing on web page test run the tests at these settings to get simlliar results to mine.
+When testing on web page test run the tests at these settings to get simlliar results to mine. If you wish to compare changes then you can compare them [here](http://performance-kit.surge.sh/).
 
 > Dulles, VA - Moto E - Chrome - 3G
 
