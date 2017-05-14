@@ -22,19 +22,19 @@ gulp.task('imagemin', function() {
 
 ## Using imageresizing.net
 
-Some CDN's have the ability for you to set the quality on the image url. On some projects I work on I use imageresizing.net. I only had to add `/path/to/image.jpg?quality=70` to the end of the image to get a smaller file size with very minor quality drops.
+imageresizing.net has the ability for you to set the quality on the image url. I only had to add `/path/to/image.jpg?quality=70` to the end of the image to get a smaller file size with very minor quality drops.
 
 For our client this has reduced the page weight from around 1.2mb of images to 900kb (avg across site).
 
 ## Progressive jpegs
-Not really a performance imrpovement in temrs of page speed, however it does improve the perceived performance. Here is an example from [IMGonline.com.ua](https://www.imgonline.com.ua/eng/make-jpeg-progressive-without-compression.php) that shows how a progressive image would look when it is 50% downloaded.
+Not really a performance imrpovement in terms of page speed, however it does improve the perceived performance. Here is an example from [IMGonline.com.ua](https://www.imgonline.com.ua/eng/make-jpeg-progressive-without-compression.php) that shows how a progressive image would look when it is 50% downloaded.
 
 ![Orginal](https://www.imgonline.com.ua/examples/original-2.jpg)![baseline jpeg](https://www.imgonline.com.ua/examples/progressive-no.jpg) ![progressive jpeg](https://www.imgonline.com.ua/examples/progressive-yes.jpg)
 
 I like this approach because we do not see half an image loading on the page. We just see the whole image but then the quality of the image gradually gets better and better.
 
 ## Webp
-Webp is a fairly new image format for the web that provides better lossless and lossy compression for images on the web. This is quite new Webp so the browser support is not amazing. :worried:
+Webp is a fairly new image format for the web that provides better lossless and lossy compression for images on the web. This is stil quite new tech but its something to add to our future roadmaps.
 
 ![WebP Browser Support](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/05-image-compression/screenshots/webp-bs.png)
 
@@ -49,7 +49,7 @@ Original - 81kb
 
 WebP - 27kb
 
-WebP is clearly something to look into soon in the future. It does not look like MS is planning to add in anytime soon.
+WebP is clearly something to look into soon in the future. It does not look like MS is planning to add in anytime soon. :worried:
 
 [Support on WebP](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webpimageformat/)
 

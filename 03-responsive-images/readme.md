@@ -1,5 +1,5 @@
 # Responsive Images
-Responsive images can be very useful for when we want to have a different image aspect ratios on different breakpoints. The reason why responsive images should be in the performance kit is because it can significantly reduce the page weight down on mobile.
+Responsive images can be very useful for when we want to have a different image aspect ratio on different breakpoints. The reason why responsive images should be in the performance kit is because it can significantly reduce the page weight down on mobile.
 
 If I had an image that was 1600px x 900px on desktop and it was around 250kb - 300kb I would'nt really want that to load on mobile especially when my mobile breakpoint is 480px. We could probably get the size down by 66% on mobile because the image we would use would be 3x smaller.
 

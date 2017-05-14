@@ -13,6 +13,8 @@ In our example we have 10 images on the page. The total file size is around `424
 
 I have used a tool called [LazySizes](https://github.com/aFarkas/lazysizes) in this example. It is really easy to setup all you have to do is add the script to the head of your document:
 
+![Load times before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/04-lazy-loading/screenshots/load-time-lazy-load.png)
+
 ```html
   <script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
   <script>
@@ -70,19 +72,8 @@ Now we have our HTML setup, we now need to add in the css to get that fade in ef
 
 ## Results
 
-> Cable
+![Load times before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/04-lazy-loading/screenshots/load-time-lazy-load-after.png)
 
-|Desktop Results     |      |       |
-|--------------------|:----:|:-----:|
-|Before              | 816ms| 2.25s|
-|After               | 767ms|  1.34s|
-
-> Regular 3G (100ms, 750kb/s, 250kb/s)
-
-|Mobile Results      |      |       |
-|--------------------|:----:|:-----:|
-|Before              | 1.15s|  10.26s|
-|After               | 1.08s|  9.19s|
-
+We didnt have a lot of images on our site so we have made a small improvement by reducing the page load by 0.9 seconds.
 
 [Chapter 5 - Image Compression](https://github.com/code-mattclaffey/performance-kit/tree/master/05-Image-compression/readme.md)

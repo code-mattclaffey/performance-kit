@@ -11,7 +11,7 @@ In the [previous example](http://performance-kit.surge.sh/08/after.html) we have
 - sddefault.jpg 36.8kb
 - player-cougar-2x-id.png 98.6kb
 
-That is pretty massive in filesize even though it is async it is adding around 635kb to our page weight.
+That is pretty massive in file size even though it is async it is adding around 635kb to our page weight.
 
 ## Lazy Loading Approach
 
@@ -167,16 +167,9 @@ In our previous example our page load was:
 
 ![Youtube Before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-youtube-player/screenshots/youtube-before.png)
 
-![Youtube Before Filmstrip](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/12-final/filmstrips/08-filmstrip.png)
-
-
-
 now it is:
 
 ![Youtube After](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/09-youtube-player/screenshots/youtube-after.png)
-
-![Youtube After Filmstrip](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/12-final/filmstrips/09-filmstrip.png)
-
 
 
 [Chapter 10 - Woff2](https://github.com/code-mattclaffey/performance-kit/tree/master/10-woff2/readme.md)

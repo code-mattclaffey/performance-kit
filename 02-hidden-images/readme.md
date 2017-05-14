@@ -1,5 +1,5 @@
 # Hidden Images
-When the image is set to `display: none;` at a certain breakpoint, we tend to forget is that the image is still loading in our browser making it very slow for the breakpoint used to hide the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way.
+When the image is set to `display: none;` at a certain breakpoint, we tend to forget is that the image is still loading in our browser making it very slow for the breakpoint not using the image. There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way.
 
 Even though these images are hidden visually, they are still being requested & downloaded by the browser. I call this wasteful page weight.
 
@@ -50,13 +50,13 @@ We can use the picture element to our advantage here using a source element like
 </li>
 ```
 
-**Note:** We need to add the `picturefill` library for browsers that dont support `picture`. We can add this in the head of the document with the `async` attribute to prevent render blocking.
+**Note:** We need to add the `picturefill` library for browsers that dont support the `picture` element. We can add this in the head of the document with the `async` attribute to prevent render blocking.
 
 ```html
   <script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
 ```
 
-We have now cut down the image page weight on mobile from 487kb to just 276kb & 10 requests to 8 request.
+We have now cut down the image page weight of 214kb on mobile.
 
 ![After.html network panel in developer tools](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/02-hidden-images/screenshots/after-html-network.png)
 

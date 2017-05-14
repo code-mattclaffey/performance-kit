@@ -21,7 +21,9 @@
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js" async></script>
 		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
 		<script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
-		<script src="/_assets/scripts/11/vendor.js"></script>
+		<script>
+			window.lazySizesConfig = window.lazySizesConfig || {};
+		</script>
 	</head>
 	<body class="no-js" data-nav-state>
 		<div id="open-nav">
@@ -306,6 +308,43 @@
 
 				document.body.appendChild(script);
 			});
+		}());
+		</script>
+		<script>
+
+		var supportsWoff2 = (function( win ){
+			if( !( "FontFace" in win ) ) {
+				return false;
+			}
+
+			var f = new FontFace('t', 'url( "data:application/font-woff2;base64,d09GMgABAAAAAADcAAoAAAAAAggAAACWAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABk4ALAoUNAE2AiQDCAsGAAQgBSAHIBtvAcieB3aD8wURQ+TZazbRE9HvF5vde4KCYGhiCgq/NKPF0i6UIsZynbP+Xi9Ng+XLbNlmNz/xIBBqq61FIQRJhC/+QA/08PJQJ3sK5TZFMlWzC/iK5GUN40psgqvxwBjBOg6JUSJ7ewyKE2AAaXZrfUB4v+hze37ugJ9d+DeYqiDwVgCawviwVFGnuttkLqIMGivmDg" ) format( "woff2" )', {});
+			f.load()['catch'](function() {});
+
+			return f.status == 'loading' || f.status == 'loaded';
+		})( this );
+
+		(function() {
+			'use strict';
+
+			function LoadFont(url, className) {
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', url, true);
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						document.querySelectorAll('html')[0].classList.add(className);
+					}
+				};
+				xhr.send();
+			}
+
+			if(supportsWoff2) {
+				LoadFont('/_assets/fonts/Roboto-Bold-webfont.woff2', 'roboto-bold-loaded');
+				LoadFont('/_assets/fonts/Roboto-Light-webfont.woff2', 'roboto-light-loaded');
+			} else {
+				LoadFont('/_assets/fonts/Roboto-Bold-webfont.woff', 'roboto-bold-loaded');
+				LoadFont('/_assets/fonts/Roboto-Light-webfont.woff', 'roboto-light-loaded');
+			}
+
 		}());
 		</script>
 	</body>

@@ -15,7 +15,6 @@
 		<link rel="dns-prefetch" href="//s.ytimg.com">
 
 		<link rel="preload" href="/_assets/fonts/lemonbird-regular-webfont.ttf">
-		<link rel="prefetch" href="/_assets/fonts/lemonbird-regular-webfont.ttf">
 		<link href="/_assets/css/05/styles.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js" async></script>
 		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
@@ -292,11 +291,30 @@
 		(function() {
 			window.addEventListener('load', function() {
 				var script = document.createElement('script');
-				script.src = '/_assets/scripts/07/main.js';
+				script.src = '/_assets/scripts/06/main.js';
 
 				document.body.appendChild(script);
 			});
 		}());
+		</script>
+		<script>
+			(function() {
+				'use strict';
+
+				function LoadFont(url, className) {
+					var xhr = new XMLHttpRequest();
+					xhr.open('GET', url, true);
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState == 4 && xhr.status == 200) {
+							document.querySelectorAll('html')[0].classList.add(className);
+						}
+					};
+					xhr.send();
+				}
+
+				LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
+				LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
+			}());
 		</script>
 	</body>
 </html>

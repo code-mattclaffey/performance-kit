@@ -7,7 +7,7 @@ Preconnect is an extension of DNS prefetch but it will make the TCP handshake an
 ## Preconnect Browser Support
 ![Browser Support for preconnect](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/08-preconnect-dns-prefetch/screenshots/preconnect.png)
 
-Like preload, it is not massively support everywhere yet but it is under consideration in the at [MS](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/preconnectresourcehints/).
+Like preload, it is not massively support everywhere yet but it is [under consideration].(https://developer.microsoft.com/en-us/microsoft-edge/platform/status/preconnectresourcehints/).
 
 ## DNS Prefetch Browser Support
 
@@ -25,6 +25,8 @@ We have a couple of assets that are loaded in from a different URL:
 We just need to add the HTML into the head of the page:
 
 ```html
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+<link rel="dns-prefetch" href="//google.com">
 <link rel="dns-prefetch" href="//cdn.rawgit.com">
 <link rel="dns-prefetch" href="//code.jquery.com">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -34,9 +36,8 @@ We just need to add the HTML into the head of the page:
 ```
 
 ## How to measure the value
-Since preconnect & dns-prefetch will reduce the round trips it makes to other URLS it will reduce the page load on the website.
 
-If you put [our previous example](http://performance-kit.surge.sh/08/after.html) in webpage test and look at the connection view we have our dns lookups happening at different times.
+If you put [our previous example](http://performance-kit.surge.sh/08/after.html) in web page test and look at the connection view we have our dns lookups happening at different times.
 
 ![Connection view before](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/08-preconnect-dns-prefetch/screenshots/connection-view-before.png)
 

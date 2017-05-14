@@ -19,7 +19,6 @@
 		<script src="https://code.jquery.com/jquery-1.12.3.min.js" async></script>
 		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
 		<script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
-		<script src="/_assets/scripts/final/vendor.min.js" async></script>
 	</head>
 	<body class="no-js" data-nav-state>
 		<div id="open-nav">
@@ -305,6 +304,9 @@
 				document.body.appendChild(script);
 			});
 		}());
+		</script>
+		<script>
+			var supportsWoff2=function(t){if(!("FontFace"in t))return!1;var o=new FontFace("t",'url( "data:application/font-woff2;base64,d09GMgABAAAAAADcAAoAAAAAAggAAACWAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABk4ALAoUNAE2AiQDCAsGAAQgBSAHIBtvAcieB3aD8wURQ+TZazbRE9HvF5vde4KCYGhiCgq/NKPF0i6UIsZynbP+Xi9Ng+XLbNlmNz/xIBBqq61FIQRJhC/+QA/08PJQJ3sK5TZFMlWzC/iK5GUN40psgqvxwBjBOg6JUSJ7ewyKE2AAaXZrfUB4v+hze37ugJ9d+DeYqiDwVgCawviwVFGnuttkLqIMGivmDg" ) format( "woff2" )',{});return o.load()["catch"](function(){}),"loading"==o.status||"loaded"==o.status}(this);!function(){"use strict";function t(t,o){var a=new XMLHttpRequest;a.open("GET",t,!0),a.onreadystatechange=function(){4==a.readyState&&200==a.status&&document.querySelectorAll("html")[0].classList.add(o)},a.send()}supportsWoff2?(t("/_assets/fonts/Roboto-Bold-webfont.woff2","roboto-bold-loaded"),t("/_assets/fonts/Roboto-Light-webfont.woff2","roboto-light-loaded")):(t("/_assets/fonts/Roboto-Bold-webfont.woff","roboto-bold-loaded"),t("/_assets/fonts/Roboto-Light-webfont.woff","roboto-light-loaded"))}();
 		</script>
 	</body>
 </html>

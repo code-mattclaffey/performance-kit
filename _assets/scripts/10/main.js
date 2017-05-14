@@ -30,19 +30,6 @@
 (function() {
 	'use strict';
 
-	function LoadFont(url, className) {
-		$.get(url).done(function() {
-			$('html').addClass(className);
-		});
-	}
-
-	LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
-	LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
-}());
-
-(function() {
-	'use strict';
-
 	var $el_youtube = $('[data-youtube]');
 
 

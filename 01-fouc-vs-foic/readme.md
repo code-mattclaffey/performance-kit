@@ -1,7 +1,7 @@
 # FOUC vs FOIC
 
 ## FOIC (“flash of invisible content”)
-In a nutshell, FOIC is when your browser is loading a font it does not have. While this is happening, the browser will paint all the text but it will appear hidden on the page until the font has loaded. Once loaded, the browser will re-paint & re-layout the text correctly. [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif)
+In a nutshell, FOIC is when the browser is loading a font it does not have. While this is happening, the browser will paint all the text but it will appear hidden on the page until the font has loaded. Once loaded, the browser will re-paint the text correctly. [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif)
 
 ## FOUC (“flash of unstyled content”)
 FOUC paints the fallback font and waits until the font has loaded. Once loaded the browser will re-paint. [See example](https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif)
@@ -10,7 +10,7 @@ In my personal opinion, I believe that FOUC is better than FOIC for one simple r
 
 ## Implementing FOUC
 
-In [our example](http://performance-kit.surge.sh/01/after.html) we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are just including the font family striaght into the css file:
+In [our example](http://performance-kit.surge.sh/01/after.html) we are going to lazy load our body copy for the page. We are currently using `Roboto`. At the minute we are following the FOIC method.
 
 ```css
 body {
@@ -22,8 +22,7 @@ body {
 }
 
 ```
-
-At the minute we are following the FOIC method. Firstly we have to remove `robotolight/robotobold` from the css selectors. After we have done that we need to add a css class as a wrapper around the elements that need the font.
+Firstly to get our fonts loading FOUC we have to remove `robotolight/robotobold` from the css properties. After we have done that we need to add a css class as a wrapper around the elements that need the font.
 
 ```css
 body,
@@ -49,7 +48,7 @@ body,
 
 ```
 
-To load the font into the page without any render blocking we have to make an async XMLHttpRequest to the server. Once the font has been loaded we will add a class to the html element specifying which font has loaded.
+Without any render blocking, we have to make an `async` http request to the server to load the assets on the page. Once the class has been added to the `<html>` element, the styles will re-paint the new font styles.
 
 ```js
 

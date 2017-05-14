@@ -8,7 +8,7 @@ Using Woff & Woff2 instead of tff makes a massive improvement to our page weight
 ![Browser Support Woff2](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-woff2/screenshots/woff2.png)
 
 ## Implementation
-We need to remove the ttf preload. The next task would be to move our LoadFont Javascript to the head of the page.
+We need to remove the ttf preload for our logo unless we decide whether to use woff only but I am happy to not preload this asset now that we are loading a smaller font.
 
 We are using some code that the [filamentgroup](https://github.com/filamentgroup/woff2-feature-test/blob/master/woff2.js) made to check if woff2 is supported in the browser.
 
@@ -29,9 +29,14 @@ var supportsWoff2 = (function( win ){
 	'use strict';
 
 	function LoadFont(url, className) {
-		$.get(url).done(function() {
-			$('html').addClass(className);
-		});
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', url, true);
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				document.querySelectorAll('html')[0].classList.add(className);
+			}
+		};
+		xhr.send();
 	}
 
 	if(supportsWoff2) {
@@ -44,12 +49,6 @@ var supportsWoff2 = (function( win ){
 
 }());
 
-```
-
-This looks like a lot of javascript in the head now so I have moved it into a vender.js file. I don't quite mind this file render blocking only because it is 1kb in filesize.
-
-```html
-<script src="/_assets/scripts/11/vendor.js"></script>
 ```
 
 We already have the files in our solution we just need to set the `@font-face` to use woff & woff2.
@@ -65,5 +64,6 @@ We already have the files in our solution we just need to set the `@font-face` t
 ```
 
 So now we have gone from 120kb of fonts to 48kb using woff2.
+
 
 [Chapter 11 - Critical CSS](https://github.com/code-mattclaffey/performance-kit/tree/master/11-critical-css/readme.md)
