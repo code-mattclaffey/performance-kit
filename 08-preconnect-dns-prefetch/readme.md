@@ -7,13 +7,19 @@ Preconnect is an extension of DNS prefetch but it will make the TCP handshake an
 ## Preconnect Browser Support
 ![Browser Support for preconnect](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/08-preconnect-dns-prefetch/screenshots/preconnect.png)
 
-Like preload, it is not massively support everywhere yet but it is [under consideration].(https://developer.microsoft.com/en-us/microsoft-edge/platform/status/preconnectresourcehints/).
+[Preconnect Browser Support](http://caniuse.com/#search=preconnect)
+
+
+Like preload, it is not massively support everywhere yet but it is [under consideration](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/preconnectresourcehints/).
 
 ## DNS Prefetch Browser Support
 
 The browser support is a lot better than preconnect so for now we are going to use dns-prefetch instead until preconnect is more widely supported.
 
 ![Browser Support for dns-prefetch](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/08-preconnect-dns-prefetch/screenshots/dns-prefetch.png)
+
+[dns-prefetch Browser Support](http://caniuse.com/#search=dns-prefetch)
+
 
 We have a couple of assets that are loaded in from a different URL:
 

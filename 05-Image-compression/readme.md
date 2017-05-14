@@ -38,6 +38,7 @@ Webp is a fairly new image format for the web that provides better lossless and 
 
 ![WebP Browser Support](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/05-Image-compression/screenshots/webp-bs.png)
 
+[Caniuse - WebP Support](http://caniuse.com/#search=webp)
 
 WebP can dramatically reduce our page weight down just from changing the format:
 

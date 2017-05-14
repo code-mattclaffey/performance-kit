@@ -3,9 +3,14 @@ Using Woff & Woff2 instead of tff makes a massive improvement to our page weight
 
 ## Browser Support on Woff
 ![Browser Support Woff](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-woff2/screenshots/woff.png)
+[Woff Browser Support](http://caniuse.com/#search=woff)
+
 
 ## Browser Support on Woff2
 ![Browser Support Woff2](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/10-woff2/screenshots/woff2.png)
+
+[Woff2 Browser Support](http://caniuse.com/#search=woff2)
+
 
 ## Implementation
 We need to remove the ttf preload for our logo unless we decide whether to use woff only but I am happy to not preload this asset now that we are loading a smaller font.

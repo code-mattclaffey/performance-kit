@@ -8,11 +8,16 @@ Preload is a great way to get an asset to load in priority over the other assets
 
 Preload is not yet widely supported by most browsers however it is something that should still be implemented as it will do nothing if the browser does not support it. Always think to yourself "How well does it fail?". Adding preload into the solution does not break the page if it isnt supported. The browser will just ignore it.
 
+[Preload Browser Support](http://caniuse.com/#search=preload)
+
+
 ## Prefetching
 
 If we are certain that a specific resource will be required we can ask the browser to request the asset and store it in the cache as a future reference.
 
 ![Prefetch browser support](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/07-preload/screenshots/prefetch-bs.png)
+
+[Prefetch Browser Support](http://caniuse.com/#search=prefetch)
 
 On our page we are looking quite good for getting the content to the user but we have no logo.
 
