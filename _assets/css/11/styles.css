@@ -13,21 +13,12 @@
 	--breakpoint-large: 64em;
 	--four-by-three: calc(3 / 4 * 100%);
 	--sixteen-by-nine: calc(9 / 16 * 100%);
-	--f-title: 'lemon_birdregular';
 }
 
 * {
 	box-sizing: border-box;
 }
 
-
-@font-face {
-    font-family: 'lemon_birdregular';
-    src: url('/_assets/fonts/lemonbird-regular-webfont.woff2') format('woff2'),
-        url('/_assets/fonts/lemonbird-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'robotobold';
@@ -252,20 +243,6 @@ li {
 	font-weight: 300;
 }
 
-.banner__heading--logo {
-	display: block;
-	font-family: var(--f-title);
-	font-size: 4em;
-	font-weight: normal;
-	line-height: 1em;
-	margin-bottom: var(--gutter);
-}
-
-@media(min-width: 30em) {
-	.banner__heading--logo {
-		font-size: 6em;
-	}
-}
 
 /*
 

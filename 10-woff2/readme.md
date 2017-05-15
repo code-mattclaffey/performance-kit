@@ -13,8 +13,6 @@ Using Woff & Woff2 instead of tff makes a massive improvement to our page weight
 
 
 ## Implementation
-We need to remove the ttf preload for our logo unless we decide whether to use woff only but I am happy to not preload this asset now that we are loading a smaller font.
-
 We are using some code that the [filamentgroup](https://github.com/filamentgroup/woff2-feature-test/blob/master/woff2.js) made to check if woff2 is supported in the browser.
 
 ```js

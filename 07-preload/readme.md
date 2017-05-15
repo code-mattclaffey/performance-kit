@@ -23,14 +23,14 @@ On our page we are looking quite good for getting the content to the user but we
 
 ![Filmstrip of render blocking scripts](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/06-render-blocking-scripts/screenshots/render-blocking-scripts.png)
 
-As you can see the `lemonbird-regular-webfont` is loading quite late.
+As you can see the `logo` is loading quite late.
 
 ![Waterfall network image](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/07-preload/screenshots/waterfall-image.png)
 
 We need to add in this HTML in the head of the document:
 
 ```html
-<link rel="preload" href="/_assets/fonts/lemonbird-regular-webfont.ttf">
+<link rel="preload" href="/_assets/images/logo.png" as="image">
 ```
 
 ![Waterfall view of preload](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/07-preload/screenshots/waterfall-image-preload-after.png)
