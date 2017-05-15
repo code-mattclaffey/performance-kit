@@ -1,7 +1,7 @@
 ![Performance Kit](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/_assets/images/cover.jpg)
 
 ## Introduction
-This collection of tutorials are based from my learnings from client projects. I will talk about what each topic is, how to implement it and then we will see the value it has made on the website.
+This collection of tutorials are based on my learnings from client projects. For each topic I will show you how to identify, implement and evaluate performance techniques that can improve your site's load time.
 
 ## Benefits
 
