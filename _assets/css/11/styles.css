@@ -539,7 +539,7 @@ li {
 }
 
 .youtube__button {
-	background: url('/_assets/images/youtube-button-red.png') no-repeat;
+	background: url('/_assets/images/youtube-button-black.png') no-repeat;
 	background-position: center;
 	background-size: 75px 65px;
 	border: 0;
@@ -560,7 +560,7 @@ li {
 .youtube:hover .youtube__button,
 .youtube__button:focus,
 .youtube__button:active {
-	background: url('/_assets/images/youtube-button-black.png') no-repeat;
+	background: url('/_assets/images/youtube-button-red.png') no-repeat;
 	background-position: center;
 	background-size: 75px 65px;
 	transform: 					scale(0.8);
