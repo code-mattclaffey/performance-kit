@@ -66,7 +66,7 @@ We already have the files in our solution we just need to set the `@font-face` t
 }
 ```
 
-So now we have gone from 120kb of fonts to 48kb using woff2.
+So now we have gone from 48kb of fonts to 36kb using woff2.
 
 
 [Chapter 11 - Critical CSS](https://github.com/code-mattclaffey/performance-kit/tree/master/11-critical-css/readme.md)
