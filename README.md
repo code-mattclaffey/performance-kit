@@ -21,6 +21,6 @@ When testing on web page test run the tests at these settings to get simlliar re
 - HTTPS
 
 
-[Chapter 1 - FOUC vs FOIC](https://github.com/code-mattclaffey/performance-kit/tree/master/01-fouc-vs-foic/readme.md)
+[Chapter 1 - Font loading strategies](https://github.com/code-mattclaffey/performance-kit/tree/master/01-font-loading-strategies/readme.md)
 
 
