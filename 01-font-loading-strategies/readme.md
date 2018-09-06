@@ -1,6 +1,6 @@
 # Font loading Strategies
 
-Fonts are a critical asset on your websites however, if not loaded correctly it can provide a very bad user expierence. A browsers default behaviour towards a new custom font will hide the content until the font is downloaded. This is known as flash of invisible text (FOIT) [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif).
+Fonts are a critical asset on a website however, if not loaded correctly it can provide a very bad user expierence. A browsers default behaviour towards a new custom font will hide the content until the font is downloaded. This is known as flash of invisible text (FOIT) [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif).
 
 When debugging this issue on a website, a good way to check whether this happens is on a waterfall diagram:
 
@@ -60,10 +60,10 @@ body {
 ```
 
 ## Let's speed these fonts up
-Even though FOUT is setup on our page, a new problem has occured. Previously the content was invisible until the font has loaded. Now we have arial displaying as our fallback font it still will take a few seconds for our fonts to load especially on a 3G connection. As mentioned above, the css file needs to be downloaded before the fonts is requested because the `@font-face` lives in the css file.
+Even though FOUT is setup on our page, a new problem has occured. Previously the content was invisible until the font has loaded. Now we have arial displaying as our fallback font it still will take a few seconds for our fonts to load especially on a 3G connection. As mentioned above, the css file needs to be downloaded before the fonts are requested because the `@font-face` lives in the css file.
 
 ### Option one - Inline @font-face
-Firt thing to do is to inline the CSS that requests those fonts to the page. When the browser is parsing the DOM it will stop when the style embed tag appears in the html. Once parsed, the browser will request those fonts. Here is an example:
+First thing to do is to inline the CSS that requests those fonts to the page. When the browser is parsing the DOM it will stop when the style embed tag appears in the html. Once parsed, the browser will request those fonts. Here is an example:
 
 ```html
 <style>
