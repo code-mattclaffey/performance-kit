@@ -97,7 +97,7 @@ Preload is only supported in Safari & Chrome. MS Edge status is in development &
 
 **Note:** make sure you add cross origin as an attribute on fonts. More information [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content#Cross-origin_fetches)
 
-Both options asre valid and work together. They both return the same result which is loading the font before the CSS file has loaded. Now our fonts load with our CSS instead of waiting for the CSS to be ready then load fonts.
+Both options are valid and work together. They both return the same result which is loading the font before the CSS file has loaded. Now our fonts load with our CSS instead of waiting for the CSS to be ready then load fonts.
 
 ![end result of preloading fonts](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/01-font-loading-strategies/preloading-and-font-display.png)
 
