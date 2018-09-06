@@ -34,10 +34,10 @@ We have removed our FOIT. What should happen now is you will see something simil
 ### What do I do if I need to get this working in Edge & IE?
 ![browser support for font-display](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/01-font-loading-strategies/font-display-browser-support.png)
 
-Sadly, browser support for `font-display` does not cover all major browsers but deciding whether to support IE & Edge with this feature is completely up to you! In terms of progressive enhancement you can just leave the `font-display` to work in the browsers that support it and then have the FOIT on Edge & IE. If you want to support those browsers there is another way to get it working. Let me introduce you to the FontFaceObserver.
+Sadly, browser support for `font-display` does not cover all major browsers but deciding whether to support IE & Edge with this feature is completely up to you! In terms of progressive enhancement you can just leave the `font-display` to work in the browsers that support it and then have the FOIT on Edge & IE. If you want to support those browsers there is another way to get it working. Let me introduce you to the Font Face Observer.
 
-### FontFace Observer
-The FontFace Observer is a fast web font loader which allows you to add extra control around your websites font loading behaviour. Here is a simple example of how this is done:
+### Font Face Observer
+The Font Face Observer is a fast web font loader which allows you to add extra control around your websites font loading behaviour. Here is a simple example of how this is done:
 
 ```js
 var myFont = new FontFaceObserver('myFont');
