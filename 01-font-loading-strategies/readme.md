@@ -4,7 +4,7 @@ Fonts are a critical asset on your websites however if not loaded correctly, it 
 
 When debugging this issue on a website, a good way to check whether this happens is on a waterfall diagram:
 
-![waterfall diagram of FOIT](https://github.com/code-mattclaffey/performance-kit/raw/master/01-fouc-vs-foic/default-font-loading.png)
+![waterfall diagram of FOIT](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/01-font-loading-strategies/default-font-loading.png)
 
 We have two problems to overcome:
 
@@ -32,7 +32,7 @@ We have removed our FOIT. What should happen now is you will see something simil
 
 
 ### What do I do if I need to get this working in Edge & IE?
-![browser support for font-display](https://github.com/code-mattclaffey/performance-kit/raw/master/01-fouc-vs-foic/font-display-browser-support.png)
+![browser support for font-display](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/01-font-loading-strategies/font-display-browser-support.png)
 
 Sadly, browser support for `font-display` does not cover all major browsers but deciding whether to support IE & Edge with this feature is completely up to you! In terms of progressive enhancement you can just leave the `font-display` to work in the browsers that support it and then have the FOIT on Edge & IE. If you want to support those browsers there is another way to get it working. Let me introduce you to the FontFaceObserver.
 
@@ -99,7 +99,7 @@ Preload is only supported in Safari & Chrome. MS Edge status is in development &
 
 Both options asre valid and work together. They both return the same result which is loading the font before the CSS file has loaded. Now our fonts load with our CSS instead of waiting for the CSS to be ready then load fonts.
 
-![end result of preloading fonts](https://github.com/code-mattclaffey/performance-kit/raw/master/01-fouc-vs-foic/preloading-and-font-display.png)
+![end result of preloading fonts](https://raw.githubusercontent.com/code-mattclaffey/performance-kit/master/01-font-loading-strategies/preloading-and-font-display.png)
 
 [Chapter 2 - Hidden Images](https://github.com/code-mattclaffey/performance-kit/tree/master/02-hidden-images/readme.md)
 
