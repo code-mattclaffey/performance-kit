@@ -1,6 +1,6 @@
 # Font loading Strategies
 
-Fonts are a critical asset on your websites however if not loaded correctly, it can provide a very bad user expierence. A browsers default behaviour towards a new custom font will hide the content until the font is downloaded. This is known as flash of invisible text (FOIT) [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif).
+Fonts are a critical asset on your websites however, if not loaded correctly it can provide a very bad user expierence. A browsers default behaviour towards a new custom font will hide the content until the font is downloaded. This is known as flash of invisible text (FOIT) [See example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif).
 
 When debugging this issue on a website, a good way to check whether this happens is on a waterfall diagram:
 
@@ -28,7 +28,7 @@ There is a really good CSS property called [font-display](https://developer.mozi
 }
 ```
 
-We have removed our FOIT. What should happen now is you will see something similiar to this [gif](https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif)
+We have removed our FOIT. What should happen now is you will see something similiar to this [example](https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif)
 
 
 ### What do I do if I need to get this working in Edge & IE?
