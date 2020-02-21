@@ -4,7 +4,7 @@ import { Heading, Text, Region, RegionInner, List, ListItem } from '@titan-tooli
 import { Header } from '../components/Header';
 import '../styles/index.css';
 
-export default function Blog() {
+export default function Homepage() {
     return (
         <>
             <Header>
@@ -47,6 +47,3 @@ export default function Blog() {
         </>
     );
 }
-Blog.defaultProps = {
-    allData: [],
-};
