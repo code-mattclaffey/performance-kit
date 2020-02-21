@@ -15,7 +15,7 @@ const Homepage = ({ metaData }) => {
         <>
             <Head>
                 <title>{metaData.title}</title>
-                <meta name="description" value={metaData.description} />
+                <meta name="description" content={metaData.description} />
             </Head>
             <Header>
                 <Heading as="h1" type="h1" additionalClassNames="c-header__heading">

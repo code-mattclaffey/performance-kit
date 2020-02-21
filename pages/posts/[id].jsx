@@ -15,7 +15,7 @@ const BlogPage = ({ content, metaData }) => {
         <div>
             <Head>
                 <title>{metaData.title}</title>
-                <meta name="description" value={metaData.description} />
+                <meta name="description" content={metaData.description} />
             </Head>
             <Header>
                 <Heading>
