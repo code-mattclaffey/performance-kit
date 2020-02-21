@@ -1,0 +1,10 @@
+/* Footer */
+
+:root {
+    --footer-border: var(--keyline);
+}
+
+.c-footer__container {
+    border-top: 1px solid var(--keyline);
+    padding-top: var(--grid-gap);
+}

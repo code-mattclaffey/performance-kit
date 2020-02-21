@@ -1,12 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
+
 import { Heading, Text, Region, RegionInner, List, ListItem } from '@titan-tooling/ui';
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import '../styles/index.css';
 
-export default function Homepage() {
+const Homepage = ({ metaData }) => {
     return (
         <>
+            <Head>
+                <title>{metaData.title}</title>
+                <meta name="description" value={metaData.description} />
+            </Head>
             <Header>
                 <Heading as="h1" type="h1" additionalClassNames="c-header__heading">
                     <span
@@ -44,6 +51,15 @@ export default function Homepage() {
                     </List>
                 </RegionInner>
             </Region>
+            <Footer></Footer>
         </>
     );
-}
+};
+
+Homepage.getInitialProps = async () => {
+    const metaData = await require(`../meta/index.js`);
+
+    return { metaData };
+};
+
+export default Homepage;

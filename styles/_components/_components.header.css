@@ -4,6 +4,7 @@
     --header-highlight-color: transparent;
     --header-rocket-size: calc(var(--heading-h1-size) * 2);
     --header-rocket-size-desktop: 5.5em;
+    --header-sub-title-size: 1.6rem;
 }
 
 .c-header__container {
@@ -15,6 +16,11 @@
 
 .c-header__heading-highlight {
     border-bottom: 5px solid var(--header-highlight-color);
+}
+
+.c-heading__heading-sub-heading {
+    font-size: var(--header-sub-title-size);
+    margin-top: 20px;
 }
 
 .c-header__rocket {
