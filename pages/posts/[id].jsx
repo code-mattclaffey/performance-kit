@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
 import Link from 'next/link';
 import '../../components/Prism';
-import '../styles/index.css';
+import '../../styles/index.css';
 
 import { Header, HeadingHighlight } from '../../components/Header';
 import { Heading, Text, RegionInner, Region } from '@titan-tooling/ui';
