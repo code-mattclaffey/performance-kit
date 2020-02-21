@@ -1,0 +1,13 @@
+/*--------------------
+    Colours
+--------------------*/
+
+:root {
+    --primary: #2e0f41;
+    --primary-light: #42145f;
+    --secondary: #ce3b57;
+    --secondary-light: #009fac;
+    --white: #ffffff;
+    --black: #000000;
+    --keyline: #dddddd;
+}

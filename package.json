@@ -1,0 +1,36 @@
+{
+    "name": "my-site",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 4000",
+        "build": "next build",
+        "start": "next build && next start",
+        "export": "next build && next export"
+    },
+    "dependencies": {
+        "@mdx-js/loader": "^1.5.5",
+        "@next/mdx": "^9.2.2",
+        "@titan-tooling/ui": "^0.8.0",
+        "classnames": "^2.2.6",
+        "next": "9.2.0",
+        "raw-loader": "^4.0.0",
+        "react": "16.12.0",
+        "react-dom": "16.12.0",
+        "react-feather": "^2.0.3",
+        "react-markdown": "^4.3.1"
+    },
+    "devDependencies": {
+        "@zeit/next-css": "^1.0.1",
+        "autoprefixer": "^9.7.4",
+        "cssnano": "^4.1.10",
+        "mqpacker": "^7.0.0",
+        "postcss-cli": "^7.1.0",
+        "postcss-custom-media": "^7.0.8",
+        "postcss-custom-properties": "^9.0.2",
+        "postcss-import": "^12.0.1",
+        "postcss-pxtorem": "^4.0.1",
+        "stylelint": "^13.0.0",
+        "stylelint-config-standard": "^19.0.0"
+    }
+}

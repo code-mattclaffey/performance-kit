@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "max-empty-lines": 4,
+    "string-quotes": null,
+    "color-hex-length": "long",
+    "declaration-colon-newline-after": null,
+    "font-family-name-quotes": null,
+    "value-list-comma-newline-after": null,
+    "max-nesting-depth": 2,
+    "indentation": null,
+    "font-family-no-duplicate-names": null,
+    "comment-empty-line-before": null,
+    "comment-whitespace-inside": null,
+    "custom-property-empty-line-before": null
+  }
+}

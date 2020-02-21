@@ -1,0 +1,67 @@
+/* Text Utils */
+
+.u-text--uppercase {
+    text-transform: uppercase;
+}
+
+.u-text--short {
+    max-width: 60ch;
+}
+
+.u-text--center {
+    text-align: center;
+}
+
+.u-text--bold {
+    font-weight: var(--heading-h1-weight);
+}
+
+.u-text--larger {
+    font-size: 1.2rem;
+}
+
+.u-text--smaller {
+    font-size: 0.9rem;
+}
+
+.u-margin--none {
+    margin: 0;
+}
+
+.u-margin--top {
+    margin-top: 20px;
+}
+
+.u-visually-hidden {
+    position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.u-flex--align-items {
+    align-items: center;
+}
+
+.u-flex--center {
+    justify-content: center;
+}
+
+@media (--md-viewport) {
+    .u-text--larger\@md {
+        font-size: 1.2rem;
+    }
+
+    .u-flex\@md {
+        display: flex;
+    }
+
+    .u-flex--justify-flex-end\@md {
+        justify-content: flex-end;
+    }
+
+}
