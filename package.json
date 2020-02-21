@@ -1,5 +1,5 @@
 {
-    "name": "my-site",
+    "name": "performance-kit",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -8,6 +8,16 @@
         "start": "next build && next start",
         "export": "next build && next export"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/code-mattclaffey/performance-kit.git"
+    },
+    "author": "Matthew Claffey",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/code-mattclaffey/performance-kit/issues"
+    },
+    "homepage": "https://github.com/code-mattclaffey/performance-kit#readme",
     "dependencies": {
         "@mdx-js/loader": "^1.5.5",
         "@next/mdx": "^9.2.2",

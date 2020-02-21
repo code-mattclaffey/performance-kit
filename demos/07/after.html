@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title> Preload & Prefetch </title>
+		<link href="/_assets/css/04/styles.css" rel="stylesheet">
+		<link rel="preload" href="/_assets/images/logo.png" as="image">
+		<script src="https://code.jquery.com/jquery-1.12.3.min.js" async></script>
+		<script src="https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js" async></script>
+		<script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
+  	<script>
+    	window.lazySizesConfig = window.lazySizesConfig || {};
+  	</script>
+	</head>
+	<body class="no-js" data-nav-state>
+		<div id="open-nav">
+		<header class="site-header">
+			<a href="#open-nav" data-nav-toggle="" class="site-header__icon btn btn--yellow icon--hamburger">
+				Menu
+			</a>
+			<nav class="site-header__nav">
+				<ul class="site-header__nav-list">
+					<li>
+						<a href="#" class="site-header__nav-link">
+							<picture class="site-header__nav-image">
+								<!--[if IE 9]><video style="display: none;><![endif]-->
+								<source data-srcset="/_assets/images-compressed/home.jpg" media="(min-width: 48em)">
+								<source data-srcset="/_assets/images-compressed/image-hidden.jpg" media="(max-width: 48em)">
+								<!--[if IE 9]></video><![endif]-->
+								<img class="image lazyload" data-src="/_assets/images-compressed/home.jpg" alt="Home"/>
+
+								<noscript>
+									<source srcset="/_assets/images-compressed/home.jpg" media="(min-width: 48em)">
+									<source srcset="/_assets/images-compressed/image-hidden.jpg" media="(max-width: 48em)">
+									<img class="image" src="/_assets/images-compressed/home.jpg" alt="Home"/>
+								</noscript>
+							</picture>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="#" class="site-header__nav-link">
+							<picture class="site-header__nav-image">
+								<!--[if IE 9]><video style="display: none;><![endif]-->
+								<source data-srcset="/_assets/images-compressed/portfolio.jpg" media="(min-width: 48em)">
+								<source data-srcset="/_assets/images-compressed/image-hidden.jpg" media="(max-width: 48em)">
+								<!--[if IE 9]></video><![endif]-->
+								<img class="image lazyload" data-src="/_assets/images-compressed/portfolio.jpg" alt="portfolio"/>
+								<noscript>
+									<source srcset="/_assets/images-compressed/portfolio.jpg" media="(min-width: 48em)">
+									<source srcset="/_assets/images-compressed/image-hidden.jpg" media="(max-width: 48em)">
+									<img class="image" src="/_assets/images-compressed/portfolio.jpg" alt="portfolio"/>
+								</noscript>
+							</picture>
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#" class="site-header__nav-link">
+							<picture class="site-header__nav-image">
+								<!--[if IE 9]><video style="display: none;><![endif]-->
+								<source data-srcset="/_assets/images-compressed/blog.jpg" media="(min-width: 48em)">
+								<source data-srcset="/_assets/images-compressed/image-hidden.jpg" media="(max-width: 48em)">
+								<!--[if IE 9]></video><![endif]-->
+								<img class="image lazyload" data-src="/_assets/images-compressed/blog.jpg" alt="Home"/>
+								<noscript>
+									<source srcset="/_assets/images-compressed/blog.jpg" media="(min-width: 48em)">
+									<source srcset="/_assets/images-compressed/image-hidden.jpg" media="(max-width: 48em)">
+									<img class="image" src="/_assets/images-compressed/blog.jpg" alt="blog"/>
+								</noscript>
+							</picture>
+							Blog
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn btn--yellow" data-nav-toggle="">Close</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class="container">
+			<article>
+				<div class="wrapper wrapper--purple">
+					<header class="banner wrapper__inner">
+						<div class="banner__content">
+							<img src="/_assets/images/logo.png" class="banner__image" alt="Hello"/>
+							<h1 class="h1 banner__heading">
+								Photography & Film Portfolio
+							</h1>
+						</div>
+					</header>
+				</div>
+				<section class="wrapper">
+					<div class="latest-video wrapper__inner">
+						<div class="latest-video__block">
+							<h2 class="h2">About Hello!</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+							</p>
+						</div>
+						<div class="latest-video__block">
+							<!--
+								Youtube component here
+							-->
+							<div class="picture picture--xs-16x9 picture--md-4x3">
+								<iframe class="iframe" src="https://www.youtube.com/embed/OUB6zKc-Tos" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="portfolio wrapper wrapper--yellow">
+					<div class="wrapper__inner">
+						<h2 class="h2 ">Illustrations</h2>
+						<ul class="portfolio__list">
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images-compressed/responsive/bbq--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images-compressed/responsive/bbq--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images-compressed/responsive/bbq--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images-compressed/responsive/bbq--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images-compressed/responsive/bbq--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images-compressed/responsive/bbq--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images-compressed/responsive/bbq--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images-compressed/responsive/bbq--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images-compressed/responsive/bbq--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images-compressed/responsive/bbq--large.jpg" class="image" alt="title" />
+											</noscript>
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images-compressed/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images-compressed/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images-compressed/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images-compressed/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images-compressed/responsive/blow-dryer--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images-compressed/responsive/blow-dryer--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images-compressed/responsive/blow-dryer--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images-compressed/responsive/blow-dryer--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images-compressed/responsive/blow-dryer--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images-compressed/responsive/blow-dryer--large.jpg" class="image" alt="title" />
+											</noscript>
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images-compressed/responsive/telescope--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images-compressed/responsive/telescope--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images-compressed/responsive/telescope--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images-compressed/responsive/telescope--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images-compressed/responsive/telescope--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images-compressed/responsive/telescope--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images-compressed/responsive/telescope--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images-compressed/responsive/telescope--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images-compressed/responsive/telescope--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images-compressed/responsive/telescope--large.jpg" class="image" alt="title" />
+											</noscript>
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images-compressed/responsive/icecream--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images-compressed/responsive/icecream--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images-compressed/responsive/icecream--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images-compressed/responsive/icecream--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images-compressed/responsive/icecream--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images-compressed/responsive/icecream--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images-compressed/responsive/icecream--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images-compressed/responsive/icecream--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images-compressed/responsive/icecream--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images-compressed/responsive/icecream--large.jpg" class="image" alt="title" />
+											</noscript>
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+							<li class="portfolio__item">
+								<div class="card">
+									<figure>
+										<picture class="picture picture--xs-4x3">
+											<!--[if IE 9]><video style="display: none;><![endif]-->
+											<source data-srcset="/_assets/images-compressed/responsive/light--large.jpg" media="(min-width: 1024px)">
+											<source data-srcset="/_assets/images-compressed/responsive/light--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+											<source data-srcset="/_assets/images-compressed/responsive/light--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+											<source data-srcset="/_assets/images-compressed/responsive/light--xs.jpg" media="(max-width: 480px)">
+											<!--[if IE 9]></video><![endif]-->
+											<img data-src="/_assets/images-compressed/responsive/light--large.jpg" class="image lazyload" alt="title" />
+											<noscript>
+												<source srcset="/_assets/images-compressed/responsive/light--large.jpg" media="(min-width: 1024px)">
+												<source srcset="/_assets/images-compressed/responsive/light--medium.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+												<source srcset="/_assets/images-compressed/responsive/light--small.jpg" media="(min-width: 481px) and (max-width: 767px)">
+												<source srcset="/_assets/images-compressed/responsive/light--xs.jpg" media="(max-width: 480px)">
+												<img src="/_assets/images-compressed/responsive/light--large.jpg" class="image" alt="title" />
+											</noscript>
+										</picture>
+										<figcaption class="card__heading">Title</figcaption>
+									</figure>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="contact wrapper">
+					<div class="wrapper__inner contact__content">
+						<h2 class="h2">
+							Talk about us
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+						</p>
+						<div class="contact__cta-block">
+							<a href="#" class="btn btn--facebook">
+								Share page
+							</a>
+							<a href="#" class="btn btn--twitter">
+								Tweet us
+							</a>
+							<a href="#" class="btn btn--instagram">
+								Follow on Instagram
+							</a>
+							<a href="#" class="btn btn--youtube">
+								Subscribe to YouTube
+							</a>
+						</div>
+					</div>
+				</section>
+				<footer class="contact wrapper wrapper--lightblue">
+					<div class="wrapper__inner contact__content">
+						<h2 class="h2">
+							Get in touch
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+						</p>
+						<div class="contact__cta-block">
+							<a href="#" class="btn btn--yellow">
+								Hire Me
+							</a>
+						</div>
+					</div>
+				</footer>
+			</article>
+		</main>
+		<div class="overlay"></div>
+		</div>
+		<script>
+		(function() {
+			window.addEventListener('load', function() {
+				var script = document.createElement('script');
+				script.src = '/_assets/scripts/06/main.js';
+
+				document.body.appendChild(script);
+			});
+		}());
+		</script>
+		<script>
+			(function() {
+				'use strict';
+
+				function LoadFont(url, className) {
+					var xhr = new XMLHttpRequest();
+					xhr.open('GET', url, true);
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState == 4 && xhr.status == 200) {
+							document.querySelectorAll('html')[0].classList.add(className);
+						}
+					};
+					xhr.send();
+				}
+
+				LoadFont('/_assets/fonts/Roboto-Bold-webfont.ttf', 'roboto-bold-loaded');
+				LoadFont('/_assets/fonts/Roboto-Light-webfont.ttf', 'roboto-light-loaded');
+			}());
+		</script>
+	</body>
+</html>
