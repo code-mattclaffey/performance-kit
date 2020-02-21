@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { Heading, Text, Region, RegionInner, List, ListItem } from '@titan-tooling/ui';
-import { Header } from '../components/Header';
+import { Header, HeadingHighlight } from '../components/Header';
 import { Footer } from '../components/Footer';
 import '../styles/index.css';
 
@@ -16,23 +16,9 @@ const Homepage = ({ metaData }) => {
             </Head>
             <Header>
                 <Heading as="h1" type="h1" additionalClassNames="c-header__heading">
-                    <span
-                        className="c-header__heading-highlight"
-                        style={{
-                            '--header-highlight-color': 'var(--secondary)',
-                        }}
-                    >
-                        Performance
-                    </span>
+                    <HeadingHighlight highlightColor="var(--secondary)">Performance</HeadingHighlight>
                     {` `}
-                    <span
-                        className="c-header__heading-highlight"
-                        style={{
-                            '--header-highlight-color': 'var(--secondary-light)',
-                        }}
-                    >
-                        Kit
-                    </span>
+                    <HeadingHighlight highlightColor="var(--secondary-light)">Kit</HeadingHighlight>
                 </Heading>
                 <Text additionalClassNames="u-text--short u-text--larger@md">
                     This collection of tutorials are based on my learnings from client projects. For each topic I will show you how to identify,

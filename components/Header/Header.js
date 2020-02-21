@@ -1,6 +1,17 @@
 import React from 'react';
 import { Region, RegionInner } from '@titan-tooling/ui';
 
+export const HeadingHighlight = ({ children, highlightColor, additionalClassNames }) => (
+    <span
+        className={`c-header__heading-highlight ${additionalClassNames}`}
+        style={{
+            '--header-highlight-color': highlightColor,
+        }}
+    >
+        {children}
+    </span>
+);
+
 export const Header = ({ children }) => (
     <Region
         as="header"

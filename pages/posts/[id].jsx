@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
 
-import { Header } from '../../components/Header';
+import { Header, HeadingHighlight } from '../../components/Header';
 import { Heading, Text, RegionInner, Region } from '@titan-tooling/ui';
 
 const BlogPage = ({ content, metaData }) => {
@@ -14,23 +14,11 @@ const BlogPage = ({ content, metaData }) => {
             </Head>
             <Header>
                 <Heading>
-                    <span
-                        className="c-header__heading-highlight"
-                        style={{
-                            '--header-highlight-color': 'var(--secondary)',
-                        }}
-                    >
-                        {headerTitle[1]}
-                    </span>
+                    <HeadingHighlight highlightColor="var(--secondary)">{headerTitle[1]}</HeadingHighlight>
                     <br />
-                    <span
-                        className="c-heading__heading-sub-heading c-header__heading-highlight"
-                        style={{
-                            '--header-highlight-color': 'var(--secondary-light)',
-                        }}
-                    >
+                    <HeadingHighlight highlightColor="var(--secondary-light)" additionalClassNames="c-heading__heading-sub-heading">
                         {headerTitle[2]}
-                    </span>
+                    </HeadingHighlight>
                 </Heading>
                 <Text additionalClassNames="u-text--short u-text--larger@md">{metaData.description}</Text>
             </Header>
