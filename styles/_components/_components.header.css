@@ -27,3 +27,12 @@
     font-size: var(--header-rocket-size);
     line-height: 1;
 }
+
+.c-header__rocket-link,
+.c-header__rocket-link:hover,
+.c-header__rocket-link:focus,
+.c-header__rocket-link:visited,
+.c-header__rocket-link:active {
+    border: 0;
+    text-decoration: none;
+}

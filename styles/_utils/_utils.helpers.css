@@ -34,13 +34,13 @@
 
 .u-visually-hidden {
     position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
 }
 
 .u-flex--align-items {
@@ -49,6 +49,10 @@
 
 .u-flex--center {
     justify-content: center;
+}
+
+.u-text--sentence-case {
+    text-transform: capitalize;
 }
 
 @media (--md-viewport) {
@@ -63,5 +67,4 @@
     .u-flex--justify-flex-end\@md {
         justify-content: flex-end;
     }
-
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Region, RegionInner, Heading, Text, Anchor } from '@titan-tooling/ui';
+import { MADE_WITH, AUTHOR } from '../../constants';
 
-export const Footer = ({ children }) => (
+export const Footer = () => (
     <Region as="footer">
         <RegionInner additionalClassNames="c-footer__container u-text--center">
             <Heading type="h5">
-                Proudly Made With ❤️ by{' '}
+                {MADE_WITH}{' '}
                 <Anchor target="_blank" href="https://twitter.com/mattclaffey1">
-                    Matthew Claffey
+                    {AUTHOR}
                 </Anchor>{' '}
                 🚀
             </Heading>

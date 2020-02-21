@@ -2,10 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
+import { blogPages } from '../config/blog-pages';
+
 import { Heading, Text, Region, RegionInner, List, ListItem } from '@titan-tooling/ui';
 import { Header, HeadingHighlight } from '../components/Header';
 import { Footer } from '../components/Footer';
 import '../styles/index.css';
+import { MAIN_TITLE_NAME, SECOND_TITLE_NAME, INTRO, CHAPTERS_TITLE } from '../constants';
 
 const Homepage = ({ metaData }) => {
     return (
@@ -16,28 +19,27 @@ const Homepage = ({ metaData }) => {
             </Head>
             <Header>
                 <Heading as="h1" type="h1" additionalClassNames="c-header__heading">
-                    <HeadingHighlight highlightColor="var(--secondary)">Performance</HeadingHighlight>
+                    <HeadingHighlight highlightColor="var(--secondary)">{MAIN_TITLE_NAME}</HeadingHighlight>
                     {` `}
-                    <HeadingHighlight highlightColor="var(--secondary-light)">Kit</HeadingHighlight>
+                    <HeadingHighlight highlightColor="var(--secondary-light)">{SECOND_TITLE_NAME}</HeadingHighlight>
                 </Heading>
-                <Text additionalClassNames="u-text--short u-text--larger@md">
-                    This collection of tutorials are based on my learnings from client projects. For each topic I will show you how to identify,
-                    implement and evaluate performance techniques that can improve your site's load time.
-                </Text>
+                <Text additionalClassNames="u-text--short u-text--larger@md">{INTRO}</Text>
             </Header>
             <Region as="main">
                 <RegionInner>
-                    <Heading>Chapters</Heading>
+                    <Heading>{CHAPTERS_TITLE}</Heading>
                     <List>
-                        <ListItem>
-                            <Link href="/posts/[id]" as="/posts/loading-fonts-the-fout-way">
-                                <a>Chapter 1 - Loading fonts the fout way</a>
-                            </Link>
-                        </ListItem>
+                        {blogPages.map(blogPage => (
+                            <ListItem key={blogPage.url} additionalClassNames="u-text--sentence-case">
+                                <Link href="/posts/[id]" as={blogPage.url}>
+                                    <a>{blogPage.name}</a>
+                                </Link>
+                            </ListItem>
+                        ))}
                     </List>
                 </RegionInner>
             </Region>
-            <Footer></Footer>
+            <Footer />
         </>
     );
 };

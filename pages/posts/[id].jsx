@@ -1,8 +1,12 @@
 import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
+import Link from 'next/link';
+import '../../components/Prism';
 
 import { Header, HeadingHighlight } from '../../components/Header';
 import { Heading, Text, RegionInner, Region } from '@titan-tooling/ui';
+import { BACK_TO_HOME_LINK_TEXT } from '../../constants';
+import { Footer } from '../../components/Footer';
 
 const BlogPage = ({ content, metaData }) => {
     const headerTitle = metaData.title.split(' - ');
@@ -22,11 +26,15 @@ const BlogPage = ({ content, metaData }) => {
                 </Heading>
                 <Text additionalClassNames="u-text--short u-text--larger@md">{metaData.description}</Text>
             </Header>
-            <Region>
-                <RegionInner>
+            <Region as="main">
+                <RegionInner as="article">
                     <ReactMarkdown source={content.default} />
+                    <Link href="/">
+                        <a className="c-button c-button--primary">{BACK_TO_HOME_LINK_TEXT}</a>
+                    </Link>
                 </RegionInner>
             </Region>
+            <Footer />
         </div>
     );
 };

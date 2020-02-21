@@ -1,6 +1,4 @@
-const docsFolder = './docs/';
-const fs = require('fs');
-
+const buildBlogPages = require('./tasks/build-local-pages');
 const withCSS = require('@zeit/next-css');
 
 const withConfig = () => {
@@ -13,18 +11,7 @@ const withConfig = () => {
 
             return config;
         },
-        exportPathMap: function() {
-            const paths = {
-                '/': { page: '/' },
-            };
-
-            fs.readdirSync(docsFolder).forEach(file => {
-                const filename = file.replace('.md', '');
-                paths[`/posts/${filename}`] = { page: `/posts/[id]`, query: { id: filename } };
-            });
-
-            return paths;
-        },
+        exportPathMap: buildBlogPages,
     };
 };
 
