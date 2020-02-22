@@ -1,7 +1,7 @@
+import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
 import Link from 'next/link';
-import '../../components/Prism';
 import '../../styles/index.css';
 
 import { Header, HeadingHighlight } from '../../components/Header';
@@ -10,12 +10,19 @@ import { BACK_TO_HOME_LINK_TEXT } from '../../constants';
 import { Footer } from '../../components/Footer';
 
 const BlogPage = ({ content, metaData }) => {
+    useEffect(() => {
+        window.addEventListener('load', () => {
+            Prism.highlightAll();
+        });
+    }, []);
+
     const headerTitle = metaData.title.split(' - ');
     return (
         <div>
             <Head>
                 <title>{metaData.title}</title>
                 <meta name="description" content={metaData.description} />
+                <script type="text/javascript" src="/scripts/prism.js" defer />
             </Head>
             <Header>
                 <Heading>

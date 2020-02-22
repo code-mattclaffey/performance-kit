@@ -1,10 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import '../components/Prism';
-
 import { blogPages } from '../config/blog-pages';
-
 import { Heading, Text, Region, RegionInner, List, ListItem } from '@titan-tooling/ui';
 import { Header, HeadingHighlight } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -32,7 +29,7 @@ const Homepage = ({ metaData }) => {
                     <List>
                         {blogPages.map(blogPage => (
                             <ListItem key={blogPage.url} additionalClassNames="u-text--sentence-case">
-                                <Link href="/posts/[id]" as={blogPage.url}>
+                                <Link href="/posts/[id]" as={blogPage.url} passHref>
                                     <a>{blogPage.name}</a>
                                 </Link>
                             </ListItem>
