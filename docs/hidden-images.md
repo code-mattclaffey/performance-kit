@@ -2,7 +2,7 @@
 
 There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way. Even though these images are visually hidden they still get requested & downloaded by the browser.
 
-## Navigation Images Is a Prime Example
+## Navigation images is a prime example
 
 Some designs have images in the navigation on desktop screens and then hide them on mobile devices. What tends to happen then is that these images that are desktop quality will then get downloaded on mobile which will impact page load.
 
@@ -21,7 +21,7 @@ What will happen now is the image that was loading on mobile has now go down to 
 
 ![Navigation Images after Load](https://github.com/code-mattclaffey/performance-kit/public/images/after-html-network.png)
 
-## Browser Support
+## Browser support
 
 If you do not support IE11 on your site then don't worry about this but if you need to then this polyfill is really useful to use as it checks which browser your user is in and then returns a bundle back based on what features you have requested
 

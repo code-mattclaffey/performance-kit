@@ -2,7 +2,7 @@
 
 Fonts have the potential to be extremly slow. The more you include the more it can impact multiple metrics such as page weight, page load, first paint and first contentful paint.
 
-## Chain Requests
+## Chain requests
 
 A chain request is when a resource that is required by another file instead of the document. When you add font-face inside a css file like below it will have a dependency on the css file to load before it can apply the font style. This can be a problem especially on slow connections because the HTML could take a second to load, then a second for your CSS and then an extra 1-2 seconds for the fonts to load. That is a total of 4 seconds where the user has not seen any text.
 
@@ -62,7 +62,7 @@ html {
 
 and that will result in [this effect][https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif].
 
-## Extra Bonus Points!
+## Extra bonus points!
 
 That is amazing we now get fonts in a little faster but if you are like me and want to make it blazingly fast lets dive deeper into what we can do. So the way the fonts load now is still the same. As mentioned above we have a chain request where the fonts are dependant on the css loading before it can load itself. Lets sort that out...
 
@@ -98,7 +98,7 @@ Example:
 
 Now what will happen is that the font will load regardless of the css. When the css has loaded, if the font has loaded by then it will swap the font font out faster.
 
-### Resource Hints
+### Resource hints
 
 The next thing we can do is use a resource hint called "preload". Preloading a font will tell the network that this font wants to be loaded before anything else. The network will then treat the font as a critical resource and prioritse it when loading assets. Preloading is your friend, but preloading everything has the opposite effect and can make the site load normal again so make sure you prioritise which fonts you want to load. A good starting point is headings and body copy.
 
@@ -125,7 +125,7 @@ Example:
 
 Preload is awesome to use on more than just fonts, the browser support is pretty good it is just ie 11 and firefox that do not support the feature. Firefox does have this feature if you enable the feature under a flag in dev tools see more on [caniuse][https://caniuse.com/#search=preload].
 
-## Hidden Gems
+## Hidden gems
 
 ### Local property
 
