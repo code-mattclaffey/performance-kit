@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import '../components/Prism';
 
 import { blogPages } from '../config/blog-pages';
 
