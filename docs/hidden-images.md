@@ -6,7 +6,7 @@ There are many factors to why this can happen such as time contraints, just doin
 
 Some designs have images in the navigation on desktop screens and then hide them on mobile devices. What tends to happen then is that these images that are desktop quality will then get downloaded on mobile which will impact page load.
 
-![Navigation Images on Load](https://github.com/code-mattclaffey/performance-kit/public/images/before-html-network.png)
+![Navigation Images on Load](https://github.com/code-mattclaffey/performance-kit/master/public/images/before-html-network.png)
 
 Fixing this problem is quite straight forward. The first thing to do is put our image in a picture tag and then whatever the breakpoint your hiding the image on, add a source element in the picture element which is a generic global image that is 1px x 1px. For example:
 
@@ -19,7 +19,7 @@ Fixing this problem is quite straight forward. The first thing to do is put our 
 
 What will happen now is the image that was loading on mobile has now go down to about 1kb and because the image is a global image everytime that image is requested it will get cached which means the requests are reduced in the network to only one.
 
-![Navigation Images after Load](https://github.com/code-mattclaffey/performance-kit/public/images/after-html-network.png)
+![Navigation Images after Load](https://github.com/code-mattclaffey/performance-kit/master/public/images/after-html-network.png)
 
 ## Browser support
 

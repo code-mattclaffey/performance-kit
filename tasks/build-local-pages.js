@@ -24,7 +24,7 @@ module.exports = () => {
 
         jsPaths.push({
             url: blogUrl,
-            name: `Chapter ${index + 1} - ${filename.replace(/-/g, ' ')}`,
+            name: filename.replace(/-/g, ' '),
         });
     });
 

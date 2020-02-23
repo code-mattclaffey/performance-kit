@@ -26,10 +26,10 @@ const BlogPage = ({ content, metaData }) => {
             </Head>
             <Header>
                 <Heading>
-                    <HeadingHighlight highlightColor="var(--secondary)">{headerTitle[1]}</HeadingHighlight>
+                    <HeadingHighlight highlightColor="var(--secondary)">{headerTitle[0]}</HeadingHighlight>
                     <br />
                     <HeadingHighlight highlightColor="var(--secondary-light)" additionalClassNames="c-heading__heading-sub-heading">
-                        {headerTitle[2]}
+                        {headerTitle[1]}
                     </HeadingHighlight>
                 </Heading>
                 <Text additionalClassNames="u-text--short u-text--larger@md">{metaData.description}</Text>
