@@ -9,7 +9,7 @@ In our example we have 10 images on the page. The total image size is around `42
 
 ## Implementing lazy loading
 
-My goto plugin is called [LazySizes](https://github.com/aFarkas/lazysizes) because it is really easy to setup, has multiple addons and features that extend the current functonality and it is lightweight. It has a mixture of ways of how to implement the script but in this example I am just loading it from git CDN.
+My go-to plugin is called [LazySizes](https://github.com/aFarkas/lazysizes) because it is really easy to setup, has multiple addons and features that extend the current functionality and it is lightweight. It has a mixture of ways of how to implement the script but in this example I am just loading it from git CDN.
 
 ```html
 <script src="https://cdn.rawgit.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
@@ -28,7 +28,7 @@ Before implementing lazy loading we have two images, a plain img tag and a respo
 </picture>
 ```
 
-When implementing lazy loading for a standalone image it is pretty straight forward. All we need to do is add the `lazyload` class name to the image and then provide a fallback image for no javascript. We do this so SEO is not impacted by making the site faster.
+When implementing lazy loading for a standalone image it is pretty straight forward. All we need to do is add the `lazyload` class name to the image and then provide a fallback image for no JavaScript. We do this so SEO is not impacted by making the site faster.
 
 ```html
 <img data-src="/_assets/images/responsive/blow-dryer--large.jpg" class="lazyload" alt="title" />
@@ -64,7 +64,7 @@ Sometimes a really weird thing can happen in IE11 where the image gets stuck on 
 
 ## CSS
 
-When the images lazyload on slower connections they can just flash on the page and it does not look amazing so try adding some fade in effects to would make it look really nice.
+When the images lazy load on slower connections they can just flash on the page and it does not look amazing so try adding some fade in effects to would make it look really nice.
 
 ```css
 .lazyload,
@@ -77,13 +77,29 @@ When the images lazyload on slower connections they can just flash on the page a
 }
 ```
 
-Another feature we have to add is the no-js fallback. We need this so the images display when the user comes to a browser with no javascript or a google bot is crawling the site.
+Another feature we have to add is the no-js fallback. We need this so the images display when the user comes to a browser with no JavaScript or a Google bot is crawling the site.
 
 ```css
 .lazyload .no-js {
     display: none;
 }
 ```
+
+## The future of lazy loading plugins?
+
+Lazy load plugins has a new kid on the block which is called `native lazy loading`. Native lazy loading is a feature first released by Google Chrome which allows you to set lazy loading on your image. It is also now supported in the last two versions of Edge which leads to around 63% global coverage across all browsers.
+
+It is really easy to implement to, all you have to do is add an attribute on the img called `loading` and define one of the following as its value:
+
+-   `auto` - default lazy loading behavior of the browser which is the same as not including the attribute
+-   `lazy` - defer loading of the resource until it is reached in the viewport
+-   `eager` - load the resource as soon as behavior regardless of where it sits on the page
+
+```html
+<img src="/_assets/images/responsive/blow-dryer--large.jpg" alt="title" loading="lazy" />
+```
+
+Is it time to stop using lazy loading plugins? I don't think so, loading prop only works for images and iframes but does not support background images. In some cases we still need these tools but I reckon in the next 2-4 years when loading attribute is globally supported it will be used everywhere. A lot of users use IOS devices over Android so I think waiting until Apple catches up would be the best approach.
 
 ## Conclusion
 
