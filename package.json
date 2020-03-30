@@ -19,7 +19,7 @@
   "homepage": "https://github.com/code-mattclaffey/performance-kit#readme",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-imagemin": "^3.2.0",
     "gulp-surge": "^0.1.0",
     "localhost": "^0.2.2"
