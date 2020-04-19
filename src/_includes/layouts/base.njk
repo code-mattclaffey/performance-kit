@@ -24,7 +24,11 @@
     {% include '../partials/header/header.njk' %}
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
+      <section class="o-region">
+        <div class="o-region__inner o-region__inner--thin">
+          {{ content | safe }}
+        </div>
+      </section>
     </main>
 
     {% include '../partials/footer/footer.njk' %}
