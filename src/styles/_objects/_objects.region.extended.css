@@ -1,8 +1,4 @@
 /* Region Extended */
 :root {
-    --region-text-color: var(--black);
-}
-
-.o-region__inner {
-    max-width: 90ch;
+  --region-text-color: var(--black);
 }

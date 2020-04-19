@@ -1,0 +1,42 @@
+/* Components - Post List */
+
+.c-post-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.c-post-list__item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.c-post-list__item *:last-of-type {
+  margin-bottom: 0;
+}
+
+.c-post-list__item-container {
+  border: 2px dashed var(--keyline);
+  border-radius: 5px;
+  padding: 20px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.c-post-list__link {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.c-post-list__link:focus {
+  outline: 0;
+}
+
+.c-post-list__link:hover ~ .c-post-list__item-container {
+  border-color: var(--secondary);
+}
+
+.c-post-list__link:focus ~ .c-post-list__item-container {
+  border-color: var(--secondary-light);
+}

@@ -13,6 +13,7 @@
 @import './_objects/_objects.region.extended.css';
 @import './_components/_components.header.css';
 @import './_components/_components.footer.css';
+@import './_components/_components.post-list.css';
 @import './_elements/_elements.page.extended.css';
 @import './_elements/_elements.headings.extended.css';
 @import './_elements/_elements.buttons.extended.css';
