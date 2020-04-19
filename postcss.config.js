@@ -8,21 +8,21 @@ const mqpacker = require('mqpacker');
 const pxtorem = require('postcss-pxtorem');
 
 module.exports = () => {
-    return {
-        plugins: [
-            postcssImport({
-                plugins: [stylelint()],
-            }),
-            postcssCustomProperties(),
-            autoprefixer({
-                flexbox: 'no-2009',
-            }),
-            cssnano(),
-            customMedia(),
-            mqpacker({
-                sort: true,
-            }),
-            pxtorem(),
-        ],
-    };
+  return {
+    plugins: [
+      postcssImport({
+        plugins: [stylelint()],
+      }),
+      postcssCustomProperties(),
+      autoprefixer({
+        flexbox: 'no-2009',
+      }),
+      cssnano(),
+      customMedia(),
+      mqpacker({
+        sort: true,
+      }),
+      pxtorem(),
+    ],
+  };
 };

@@ -5,7 +5,6 @@
 */
 
 @import '../../node_modules/@titan-tooling/ui/dist/main.css';
-
 @import './_settings/_settings.tokens.css';
 @import './_settings/_settings.colors.css';
 @import './_settings/_settings.fonts.extended.css';
