@@ -33,10 +33,9 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addCollection('tagList', require('./_11ty/getTagList'));
-
   eleventyConfig.addPassthroughCopy('./src/img');
   eleventyConfig.addPassthroughCopy('./src/styles');
+  eleventyConfig.addPassthroughCopy('./src/manifest.json');
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({

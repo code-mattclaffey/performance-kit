@@ -4,9 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{metadata.title}} {% if renderData.title or title %} - {{ renderData.title or title }} {% endif %}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <meta name="Description" content="{{ renderData.description or description or metadata.description }}"/>
+    <meta property="og:title" content="{{metadata.title}} {% if renderData.title or title %} - {{ renderData.title or title }} {% endif %}" />
+    <meta property="og:description" content="{{ renderData.description or description or metadata.description }}"/>
+    <meta property="og:url" content="{{ url }}">
+    <meta name="twitter:title" content="{{metadata.title}} {% if renderData.title or title %} - {{ renderData.title or title }} {% endif %}" />
+    <meta name="twitter:description" content="{{ renderData.description or description or metadata.description }}" />
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon.png">
+    <link rel="icon" sizes="16x16" type="image/png" href="/img/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" type="image/png" href="/img/favicon-32x32.png" />
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="manifest" href="/manifest.json"/>
+    <meta name="theme-color" content="#2e0f41" />
   </head>
   <body>
     {% include '../partials/header/header.njk' %}
