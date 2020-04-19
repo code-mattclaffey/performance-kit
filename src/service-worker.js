@@ -47,7 +47,6 @@ function handleFetchEvent(event) {
   }
 
   if (event.request.mode === 'navigate') {
-    console.log('Offline');
     event.respondWith(fetch(event.request).catch((error) => caches.match('/offline/')));
   }
 }
