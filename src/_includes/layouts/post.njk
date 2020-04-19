@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="o-region">
+  <div class="o-region__inner">
+    {{ content | safe }}
+    <p><a class="c-button c-button--primary" href="{{ '/' | url }}">{{ global.BACK_TO_HOME_LINK_TEXT }}</a></p>
+  </div>
+</article>
+

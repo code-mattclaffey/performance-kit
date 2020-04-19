@@ -1,46 +1,51 @@
 {
-    "name": "performance-kit",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev -p 4000",
-        "build": "next build",
-        "start": "next build && next start",
-        "export": "next build && next export"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/code-mattclaffey/performance-kit.git"
-    },
-    "author": "Matthew Claffey",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/code-mattclaffey/performance-kit/issues"
-    },
-    "homepage": "https://github.com/code-mattclaffey/performance-kit#readme",
-    "dependencies": {
-        "@mdx-js/loader": "^1.5.5",
-        "@next/mdx": "^9.2.2",
-        "@titan-tooling/ui": "^0.8.0",
-        "classnames": "^2.2.6",
-        "next": "9.2.0",
-        "raw-loader": "^4.0.0",
-        "react": "16.12.0",
-        "react-dom": "16.12.0",
-        "react-feather": "^2.0.3",
-        "react-markdown": "^4.3.1"
-    },
-    "devDependencies": {
-        "@zeit/next-css": "^1.0.1",
-        "autoprefixer": "^9.7.4",
-        "cssnano": "^4.1.10",
-        "mqpacker": "^7.0.0",
-        "postcss-cli": "^7.1.0",
-        "postcss-custom-media": "^7.0.8",
-        "postcss-custom-properties": "^9.0.2",
-        "postcss-import": "^12.0.1",
-        "postcss-pxtorem": "^4.0.1",
-        "stylelint": "^13.0.0",
-        "stylelint-config-standard": "^19.0.0"
-    }
+  "name": "performance-kit",
+  "version": "1.0.0",
+  "description": "A blog about web performance made with Eleventy",
+  "scripts": {
+    "build:css": "postcss ./src/styles/index.css -o ./src/styles/main.css -m",
+    "build": "npm run build:css && eleventy",
+    "watch": "npm run build:css && eleventy --watch",
+    "serve:css": "npm run build:css -- -w",
+    "serve:site": "npm run build:css && eleventy --serve",
+    "serve": "concurrently \"npm run serve:site\" \"npm run serve:css\"",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/code-mattclaffey/performance-kit.git"
+  },
+  "author": {
+    "name": "Matthew Claffey",
+    "email": "mattclaffey93@gmail.com",
+    "url": "https://mattclaffey.netlify.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/code-mattclaffey/performance-kit/issues"
+  },
+  "homepage": "https://github.com/code-mattclaffey/performance-kit#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-navigation": "^0.1.3",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "luxon": "^1.21.3",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.2.5",
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "mqpacker": "^7.0.0",
+    "postcss-cli": "^7.1.0",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "^9.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-pxtorem": "^4.0.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-standard": "^19.0.0"
+  },
+  "dependencies": {
+    "@titan-tooling/ui": "^0.15.2",
+    "concurrently": "^5.1.0"
+  }
 }

@@ -1,0 +1,47 @@
+.e-link,
+a[not='class'] {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.e-link:hover,
+a[not='class']:hover,
+.e-link:focus,
+a[not='class']:focus,
+.e-link:visited,
+a[not='class']:visited,
+.e-link:active,
+a[not='class']:active {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+/* anchor in readme */
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  padding-right: 20px;
+  position: relative;
+}
+
+.direct-link {
+  color: var(--secondary);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  text-align: right;
+  opacity: 0.2;
+  top: 0;
+  transition: opacity 0.2s ease-in-out;
+  width: 100%;
+}
+
+.direct-link:hover,
+.direct-link:focus {
+  opacity: 1;
+}

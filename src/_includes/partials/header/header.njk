@@ -1,0 +1,17 @@
+<header class="o-region" style="--region-bg: var(--primary); --region-text-color: var(--white)">
+  <div class="o-region__inner c-header__container">
+    <div class="c-header__rocket">
+      <a href="/" class="c-header__rocket-link" title="{{ global.HOME_URL_LINK }}">
+        🚀
+      </a>
+    </div>
+    <div>
+
+      <h1 class="e-heading e-heading--h2 c-header__heading">
+          <span class="c-header__heading-highlight" style="--header-highlight-color: var(--secondary);">{{metadata.title}}</span>
+         {% if title %} <br /><span class="c-header__heading-highlight c-heading__heading-sub-heading" style="--header-highlight-color: var(--secondary-light)">{{title}}</span> {% endif %}
+      </h1>
+      <p class="e-text u-text--short u-text--larger@md">{{description or global.Intro}}</p>
+    </div>
+  </div>
+</header>

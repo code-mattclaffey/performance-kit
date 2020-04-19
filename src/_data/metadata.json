@@ -1,0 +1,9 @@
+{
+  "title": "Performance Kit",
+  "url": "https://myurl.com/",
+  "description": "This collection of tutorials are based on my learnings from client projects. For each topic I will show you how to identify, implement and evaluate performance techniques that can improve your site's load time.",
+  "author": {
+    "name": "Matt Claffey",
+    "email": "mattclaffey03@gmail.com"
+  }
+}
