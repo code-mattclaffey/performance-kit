@@ -6,6 +6,7 @@
       <h3 class="e-heading e-heading--h3 u-margin--none">{{ post.data.title }}</h3>
       <p><time datetime="{{ post.date | htmlDateString }}" class="u-text--smaller">{{ post.date | readableDate }}</time></p>
       <p>{{ post.data.description }}</p>
+      <span class="e-link" aria-hidden="true">Read more</span>
     </div>
   </li>
 {% endfor %}
