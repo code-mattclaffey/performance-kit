@@ -6,7 +6,7 @@ layout: layouts/post.njk
 
 ## How does this happen?
 
-There are many factors to why this can happen such as time contraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way. Even though these images are visually hidden they still get requested & downloaded by the browser.
+There are many factors to why this can happen such as time constraints, just doing a quick fix/change and lack of understanding of what will happen if its done that way. Even though these images are visually hidden they still get requested & downloaded by the browser.
 
 ## Navigation images is a prime example
 
@@ -23,7 +23,7 @@ Fixing this problem is quite straight forward. The first thing to do is put our 
 </picture>
 ```
 
-What will happen now is the image that was loading on mobile has now go down to about 1kb and because the image is a global image everytime that image is requested it will get cached which means the requests are reduced in the network to only one.
+What will happen now is the image that was loading on mobile has now go down to about 1kb and because the image is a global image every time that image is requested it will get cached which means the requests are reduced in the network to only one.
 
 ![Navigation Images after Load](https://performance-kit.netlify.app/img/after-html-network.png)
 

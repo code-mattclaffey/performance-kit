@@ -24,7 +24,7 @@ When the fonts are slow you can tell all of a sudden seeing no text and then a "
 
 ## What is FOIT
 
-Flash of invisible text is when the text on a website is invisible and then when the fonts have loaded they appear on the page. The text is rendered on the page ready but the browser does not know what font to use until they have loaded. When loaded, the the browser will "re-paint" the screen and show the new font, [here is an example][https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif].
+Flash of invisible text is when the text on a website is invisible and then when the fonts have loaded they appear on the page. The text is rendered on the page ready but the browser does not know what font to use until they have loaded. When loaded, the the browser will "re-paint" the screen and show the new font, here is an ![example](https://cloud.githubusercontent.com/assets/1369170/19876828/0aa7d0d6-9f97-11e6-86c8-b7e2c80a9986.gif).
 
 We want to remove this "blink" effect and try to have some form of content there so the user can get a feel for what message the website is trying to send quicker than having to wait for the font to load. This is called FOUT (Flash of unstyled text).
 
@@ -66,7 +66,7 @@ html {
 }
 ```
 
-and that will result in [this effect][https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif].
+and that will result in ![this effect](https://cloud.githubusercontent.com/assets/1369170/19876827/0aa5c8d6-9f97-11e6-81a2-13fa35f6bbc9.gif).
 
 ## Extra bonus points!
 
@@ -74,7 +74,7 @@ That is amazing we now get fonts in a little faster but if you are like me and w
 
 ### Embedding CSS
 
-First thing we can do is embed our font-face css in the html document. Downside to this is not being able to cache the embed code but if your fonts are about 10-30 lines of css then it is not a masisve problem.
+First thing we can do is embed our font-face css in the html document. Downside to this is not being able to cache the embed code but if your fonts are about 10-30 lines of css then it is not a massive problem.
 
 Example:
 
@@ -106,7 +106,7 @@ Now what will happen is that the font will load regardless of the css. When the 
 
 ### Resource hints
 
-The next thing we can do is use a resource hint called "preload". Preloading a font will tell the network that this font wants to be loaded before anything else. The network will then treat the font as a critical resource and prioritse it when loading assets. Preloading is your friend, but preloading everything has the opposite effect and can make the site load normal again so make sure you prioritise which fonts you want to load. A good starting point is headings and body copy.
+The next thing we can do is use a resource hint called "preload". Preloading a font will tell the network that this font wants to be loaded before anything else. The network will then treat the font as a critical resource and prioritize it when loading assets. Preloading is your friend, but preloading everything has the opposite effect and can make the site load normal again so make sure you prioritize which fonts you want to load. A good starting point is headings and body copy.
 
 Example:
 
@@ -129,13 +129,13 @@ Example:
 </head>
 ```
 
-Preload is awesome to use on more than just fonts, the browser support is pretty good it is just ie 11 and firefox that do not support the feature. Firefox does have this feature if you enable the feature under a flag in dev tools see more on [caniuse][https://caniuse.com/#search=preload].
+Preload is awesome to use on more than just fonts, the browser support is pretty good it is just ie 11 and Firefox that do not support the feature. Firefox does have this feature if you enable the feature under a flag in dev tools see more on [caniuse](https://caniuse.com/#search=preload).
 
 ## Hidden gems
 
 ### Local property
 
-This is a gamer changer! Espcially if you are using fonts such as helvetica on your website. On apple devices helvetica is installed locally so when the user comes to your website you can tell your css to pick the local font over the one on your server. How neat right?
+This is a gamer changer! Especially if you are using fonts such as Helvetica on your website. On apple devices Helvetica is installed locally so when the user comes to your website you can tell your css to pick the local font over the one on your server. How neat right?
 
 For example:
 
@@ -156,4 +156,4 @@ Note: make sure you add local first because the order is important on the src pr
 
 ## Conclusion
 
-You have learnt how to load fonts in the page ultra fast and understood the definition between FOUT and FOIT. I hope that made sense. If not, please raise an issue on my [github page][https://github.com/code-mattclaffey/performance-kit/issues] and I will sort it out asap.
+You have learned how to load fonts in the page ultra fast and understood the definition between FOUT and FOIT. I hope that made sense. If not, please raise an issue on my [github page](https://github.com/code-mattclaffey/performance-kit/issues) and I will sort it out asap.

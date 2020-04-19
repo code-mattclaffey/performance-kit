@@ -1,8 +1,12 @@
 :root {
-    --button-bg: var(--primary);
-    --button-border: 2px solid var(--primary);
-    --button-color: var(--white);
-    --button-hover-bg: var(--primary-light);
-    --button-hover-border: 2px solid var(--primary-light);
-    --button-hover-color: var(--white);
+  --button-bg: var(--primary);
+  --button-border: 2px solid var(--primary);
+  --button-color: var(--white);
+  --button-hover-bg: var(--primary-light);
+  --button-hover-border: 2px solid var(--primary-light);
+  --button-hover-color: var(--white);
+  --button-secondary-bg: var(--secondary);
+  --button-secondary-border: 2px solid var(--secondary);
+  --button-secondary-hover-bg: #a53046;
+  --button-secondary-hover-border: 2px solid #a53046;
 }

@@ -62,11 +62,11 @@ With picture elements it is a little different because you need to apply new att
 </picture>
 ```
 
-**Note:** The lazy loading may not work correctly if you do not set the correct sizes for your placeholders. Images that have no height will be loaded on the page at the wrong time because they may sit further up the fold. To work around this, find out what aspect ratio the image is for each breakpoint and [maintain the aspect ratio][https://css-tricks.com/aspect-ratio-boxes/].
+**Note:** The lazy loading may not work correctly if you do not set the correct sizes for your placeholders. Images that have no height will be loaded on the page at the wrong time because they may sit further up the fold. To work around this, find out what aspect ratio the image is for each breakpoint and maintain the [aspect ratio](https://css-tricks.com/aspect-ratio-boxes/).
 
 ## IE11 glitch
 
-Sometimes a really weird thing can happen in IE11 where the image gets stuck on `lazy-loading` state and the image just does not load at all. If you have this issue, the fix is to set your image element from `data-src` to `data-srcset`. It does get confused when you add a source element with a media that has a min width. More info [here][https://github.com/afarkas/lazysizes/issues/311].
+Sometimes a really weird thing can happen in IE11 where the image gets stuck on `lazy-loading` state and the image just does not load at all. If you have this issue, the fix is to set your image element from `data-src` to `data-srcset`. It does get confused when you add a source element with a media that has a min width. More info [here](https://github.com/afarkas/lazysizes/issues/311).
 
 ## CSS
 
@@ -113,4 +113,4 @@ When this is done on pages that have a ton of images this can be really effectiv
 
 ![Load times before](https://performance-kit.netlify.app/img/load-time-lazy-load-after.png)
 
-If not, please raise an issue on my [github page][https://github.com/code-mattclaffey/performance-kit/issues] and I will sort it out asap.
+If not, please raise an issue on my github page - https://github.com/code-mattclaffey/performance-kit/issues and I will sort it out asap.

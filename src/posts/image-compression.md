@@ -10,7 +10,7 @@ There are many reason why this can happen and it normally falls down to a mixtur
 
 ## What is out there already?
 
-### Progresssive jpegs
+### Progressive jpegs
 
 A progressive jpeg is a good go-to to use on your website, although they are a little larger than the average jpeg they load a little different which makes the "perceived performance" a lot nicer.
 
@@ -41,8 +41,8 @@ This is easy but on large scale websites it not effective use of time. The best 
 
 If setup properly this implementation works really nicely with CMS (content management sites) as the user is the one in control of what is uploaded.
 
-[Caniuse Webp][https://caniuse.com/#feat=webp]
+[Caniuse Webp](https://caniuse.com/#feat=webp)
 
 ### Squoosh
 
-When I want to compress my own images I use this app as it is really easy to use and has a wide variety of options to choose from - [Squoosh][https://squoosh.app/].
+When I want to compress my own images I use this app as it is really easy to use and has a wide variety of options to choose from - [Squoosh](https://squoosh.app/).
