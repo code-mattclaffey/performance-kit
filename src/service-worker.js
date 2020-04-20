@@ -6,7 +6,7 @@
 
 const cacheFiles = ['/offline/', '/styles/main.css'];
 
-const cacheName = 'performance-kit-cache';
+const cacheName = 'performance-kit-cache.0.0.2';
 
 function handleInstallEvent(event) {
   event.waitUntil(

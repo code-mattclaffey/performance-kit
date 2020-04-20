@@ -28,30 +28,3 @@
   font-size: var(--header-sub-title-size);
   margin-top: 20px;
 }
-
-.c-header__rocket {
-  font-size: var(--header-rocket-size);
-  line-height: 1;
-}
-
-.c-header__rocket-link .e-picture {
-  padding-top: 100%;
-  width: 60px;
-}
-
-@media screen and (min-width: 40em) {
-  .c-header__rocket-link .e-picture {
-    width: 120px;
-  }
-}
-
-.c-header__rocket-link,
-.c-header__rocket-link:hover,
-.c-header__rocket-link:focus,
-.c-header__rocket-link:visited,
-.c-header__rocket-link:active {
-  border: 0;
-  color: var(--white);
-  display: block;
-  text-decoration: none;
-}

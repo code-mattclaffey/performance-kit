@@ -1,12 +1,5 @@
 <header class="o-region c-header {% if offline %} c-header--offline {% endif %}" style="--region-bg: var(--primary); --region-text-color: var(--white);">
   <div class="o-region__inner c-header__container">
-    <div class="c-header__rocket">
-      <a href="/" class="c-header__rocket-link" title="{{ global.HOME_URL_LINK }}" aria-label="{{ global.HOME_URL_LINK }}">
-        <div class="e-picture">
-          <img src="/img/android-chrome-192x192.png" class="e-img" alt="{{ global.HOME_URL_LINK }}" />
-        </div>
-      </a>
-    </div>
     <div>
       <h1 class="e-heading e-heading--h2 c-header__heading">
           {% if offline %}
@@ -19,8 +12,9 @@
       </h1>
       {% if offline %}
         <a href=".?utm_source=offline-page" class="c-button c-button--secondary">Return Home</a>
+        {% else %}
+          {% if description or global.INTRO %} <p class="e-text u-text--short u-text--larger@md">{{description or global.INTRO}}</p> {% endif %}
       {% endif %}
-      {% if description or global.INTRO %} <p class="e-text u-text--short u-text--larger@md">{{description or global.INTRO}}</p> {% endif %}
     </div>
   </div>
 </header>
