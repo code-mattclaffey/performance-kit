@@ -4,7 +4,20 @@
     titan-ui is a cssframework/react library
 */
 
-@import '../../node_modules/@titan-tooling/ui/dist/main.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/settings/_settings.breakpoints.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/settings/_settings.colors.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/settings/_settings.fonts.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/settings/_settings.spacing.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/utilities/_utilities.helpers.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/generic/_generic.box-sizing.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/generic/_generic.reset.css';
+@import '../../node_modules/@titan-tooling/ui/src/css/generic/_generic.shared.css';
+@import '../../node_modules/@titan-tooling/ui/src/components/anchor/anchor.css';
+@import '../../node_modules/@titan-tooling/ui/src/components/buttons/buttons.css';
+@import '../../node_modules/@titan-tooling/ui/src/components/heading/heading.css';
+@import '../../node_modules/@titan-tooling/ui/src/components/lists/lists.css';
+@import '../../node_modules/@titan-tooling/ui/src/components/region/region.css';
+@import '../../node_modules/@titan-tooling/ui/src/components/text/text.css';
 @import './_settings/_settings.tokens.css';
 @import './_settings/_settings.colors.css';
 @import './_settings/_settings.fonts.extended.css';

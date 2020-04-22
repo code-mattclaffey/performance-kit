@@ -11,7 +11,14 @@
     <meta name="twitter:title" content="{{metadata.title}} {% if renderData.title or title %} - {{ renderData.title or title }} {% endif %}" />
     <meta name="twitter:description" content="{{ renderData.description or description or metadata.description }}" />
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+      {% include 'main.css' %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{ css | safe }}
+    </style>
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon.png">
     <link rel="icon" sizes="16x16" type="image/png" href="/img/favicon-16x16.png" />
@@ -39,8 +46,12 @@
       if ('serviceWorker' in navigator) {
         // Use the window load event to keep the page load performant
         window.addEventListener('load', () => {
-          console.log('Service worker enabled');
-          navigator.serviceWorker.register('/service-worker.js');
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function() {
+              console.log("ServiceWorker has been registered!");
+            })
+            .catch(console.error);
         });
       }
     </script>
