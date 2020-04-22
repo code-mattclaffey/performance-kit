@@ -8,7 +8,6 @@ const markdownItAnchor = require('markdown-it-anchor');
 const pluginPWA = require("eleventy-plugin-pwa");
 const htmlmin = require("html-minifier");
 const posthtml = require('posthtml');
-const minifyClassnames = require('posthtml-minify-classnames');
 var uglify = require('posthtml-uglify');
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
