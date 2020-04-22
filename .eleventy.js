@@ -7,7 +7,9 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const pluginPWA = require("eleventy-plugin-pwa");
 const htmlmin = require("html-minifier");
-
+const posthtml = require('posthtml');
+const minifyClassnames = require('posthtml-minify-classnames');
+var uglify = require('posthtml-uglify');
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -21,13 +23,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
+    if(outputPath.endsWith(".html")) {
+      return posthtml()
+        .use(uglify())
+        .process(content)
+        .then(result => {
+          let minified = htmlmin.minify(result.html, {
+            useShortDoctype: true,
+            removeComments: true,
+            collapseWhitespace: true
+          });
+
+          return minified;
+        });
     }
 
     return content;
