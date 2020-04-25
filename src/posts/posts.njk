@@ -1,0 +1,13 @@
+---
+pagination:
+    data: medium.posts
+    size: 1
+    alias: post
+permalink: "posts-medium/{{ post.title | slug }}/"
+title: {{ post.title }}
+description: {{ post.shortDescription }}
+layout: layouts/post.njk
+---
+
+{{ post.content | safe }}
+

@@ -40,8 +40,6 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
-
   eleventyConfig.addFilter('readableDate', (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('dd LLL yyyy');
   });
@@ -65,18 +63,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/manifest.json');
   eleventyConfig.addPassthroughCopy('./src/service-worker.js');
 
-  /* Markdown Overrides */
-  let markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: 'direct-link',
-    permalinkSymbol: '#',
-  });
-  eleventyConfig.setLibrary('md', markdownLibrary);
-
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
@@ -95,7 +81,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    templateFormats: ['md', 'njk', 'html', 'liquid'],
+    templateFormats: ['njk', 'html', 'liquid'],
 
     // If your site lives in a different subdirectory, change this.
     // Leading or trailing slashes are all normalized away, so don’t worry about those.

@@ -30,6 +30,7 @@
 @import './_elements/_elements.headings.extended.css';
 @import './_elements/_elements.buttons.extended.css';
 @import './_elements/_elements.link.extended.css';
+@import './_elements/_elements.image.css';
 @import './_utils/_utils.helpers.css';
 @import './_vendor/_vendor.prism.css';
 

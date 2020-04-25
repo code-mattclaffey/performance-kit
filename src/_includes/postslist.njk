@@ -1,11 +1,22 @@
 <ol reversed class="c-post-list">
-{% for post in postslist | reverse %}
+{# {% for post in postslist | reverse %}
   <li class="c-post-list__item">
     <a href="{{ post.url | url }}" class="c-post-list__link"><span class="u-visually-hidden">Read more about {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</span></a>
     <div class="c-post-list__item-container">
       <h3 class="e-heading e-heading--h3 u-margin--none">{{ post.data.title }}</h3>
-      <p><time datetime="{{ post.date | htmlDateString }}" class="u-text--smaller">{{ post.date | readableDate }}</time></p>
-      <p>{{ post.data.description }}</p>
+      <p class="c-post-list__date"><time datetime="{{ post.date | htmlDateString }}" class="u-text--smaller">{{ post.date | readableDate }}</time></p>
+      <p class="c-post-list__short-description">{{ post.data.description }}</p>
+      <span class="e-link" aria-hidden="true">Read more</span>
+    </div>
+  </li>
+{% endfor %} #}
+{% for post in medium.posts %}
+  <li class="c-post-list__item">
+    <a href="posts-medium/{{ post.title | slug }}" class="c-post-list__link"><span class="u-visually-hidden">Read more about {% if post.title %}{{ post.title }}{% else %}<code>{{ post.link }}</code>{% endif %}</span></a>
+    <div class="c-post-list__item-container">
+      <h3 class="e-heading e-heading--h3 u-margin--none">{{ post.title }}</h3>
+      <p class="c-post-list__date"><time datetime="{{ post.pubDate | htmlDateString }}" class="u-text--smaller">{{ post.pubDate | readableDate }}</time></p>
+      <div class="c-post-list__short-description">{{ post.shortDescription | safe }}</div>
       <span class="e-link" aria-hidden="true">Read more</span>
     </div>
   </li>
