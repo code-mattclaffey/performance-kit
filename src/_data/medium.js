@@ -8,7 +8,7 @@ module.exports = async () => {
 
   const performanceRelatedPosts = response.data.items.filter(({ categories }) => {
     const performanceTags = ['performance', 'web-performance', 'pwa', 'amp', 'progressive-web-app', 'offline-first'];
-    const hasPerformanceTags = categories.some(category => performanceTags.indexOf(category) !== -1);
+    const hasPerformanceTags = categories.some(category => performanceTags.indexOf(category.toLowerCase()) !== -1);
 
     return hasPerformanceTags;
   }).map(post => {
